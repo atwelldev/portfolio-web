@@ -1,0 +1,133 @@
+@media (max-width: 1520px) {
+    .works__container {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+    // First contact popup
+    .contact-popup {
+        flex-direction: column;
+        align-items: center;
+        overflow: scroll;
+        height: 100%;
+    }
+
+    // .contact-popup__cross {
+    //     top: 50px;
+    //     right: 350px;
+
+    //     &::before, &::after {
+    //         content: "";
+    //         background-color: black;
+    //     }
+    // }
+    
+    // white
+    .contact-popup__white {
+        padding: 20px 370px;
+        height: 100%;
+        width: 100%;
+        animation: ease 1s contacts__popup_black_mobile;
+    }
+
+    .contact-popup__text {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .contact-popup__cross_desk {
+        display: none;
+    }
+    .contact-popup__cross_mobile {
+        &::before, &::after {
+            background-color: black;
+        }
+        position: absolute;
+        display: block;
+        top: 0px;
+        right: 0px;
+    }
+
+    .contact-popup__title {
+
+     
+    }
+    .contact-popup__subtitle {
+        margin-bottom: 0;
+    }
+
+        // Black
+        .contact-popup__black {
+            height: 100%;
+            width: 100%;
+            animation: ease 1s contacts__popup_white_mobile;
+            
+    
+        }
+    .popup-black__black_container {
+        width: 320px;
+    }
+
+
+    .contact-popup__form {
+        font-size: 1.8rem;
+        width: 100%;
+        & input {
+            width: 100%;
+        }
+        & textarea {
+            width: 100%;
+
+        }
+        & button {
+            width: 100%;
+        }
+    }
+
+}
+
+@media (max-width: 767px) {
+    .first__contacts {
+        display: none;
+    }
+    .works__container {
+        flex-direction: column;
+    }
+    .card__pair {
+        flex-direction: column;
+    }
+    // footer
+    .footer__el {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        
+        
+    }
+    .footer__link {
+        font-size: 2.1rem;
+    }
+
+
+    // First
+    .first__container {
+        justify-content: center;
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 575px) {
+    .first__container {
+        justify-content: center;
+        padding-left: 60px;
+    }
+}

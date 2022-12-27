@@ -1,0 +1,116 @@
+/*Drop*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 10px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit; }
+
+/*--------------------*/
+html {
+  font-family: League Spartan, Helvetica, Arial, sans-serif;
+  color: white;
+  scroll-behavior: smooth; }
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: ease 0.3s; }
+
+._container {
+  max-width: 1076px;
+  margin: 0 auto; }
+
+._section {
+  margin-bottom: 50px; }
+
+.title {
+  font-size: 7.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 50px; }
+
+.paragraph {
+  font-size: 2.4rem;
+  margin-bottom: 30px; }
+
+.button {
+  background: linear-gradient(to right, cyan, #b0ffff);
+  height: 60px;
+  width: 200px;
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s ease;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden; }
+  .button:hover {
+    transform: scale(1.05, 1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+  .button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 300%;
+    top: -60px;
+    left: -200px;
+    transition: 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: rotate(45deg); }
+  .button:hover::before {
+    transform: translate(450px, 0) rotate(45deg); }

@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "removeComments": true,
+        "outDir": "js",
+        "sourceMap": false,
+        "watch": true,
+        
+    },
+    // "files": [
+    //     "ts/index.ts"
+    // ]
+    // "exclude": [
+    //     "ts/header.ts"
+    // ]
+}

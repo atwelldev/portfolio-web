@@ -1,0 +1,41 @@
+@keyframes mobileMenu {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes contact {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes popUp {
+  from {
+    transform: translate(0, -200%); }
+  to {
+    transform: translate(0, 0); } }
+
+@keyframes popUp_black {
+  from {
+    transform: translate(0, 200%); }
+  to {
+    transform: translate(0, 0); } }
+
+@keyframes contacts__popup_black_mobile {
+  from {
+    transform: translate(-100%, 0); }
+  to {
+    transform: translate(0, 0); } }
+
+@keyframes contacts__popup_white_mobile {
+  from {
+    transform: translate(100%, 0); }
+  to {
+    transform: translate(0, 0); } }
+
+@keyframes backUp {
+  from {
+    transform: translate(25px, 0); }
+  to {
+    transform: translate(-25px, 0); } }

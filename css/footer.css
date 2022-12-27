@@ -1,0 +1,108 @@
+@media (max-width: 1520px) {
+  .works__container {
+    flex-direction: column; } }
+
+@media (max-width: 991px) {
+  .contact-popup {
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    height: 100%; }
+  .contact-popup__white {
+    padding: 20px 370px;
+    height: 100%;
+    width: 100%;
+    animation: ease 1s contacts__popup_black_mobile; }
+  .contact-popup__text {
+    position: relative;
+    margin-bottom: 20px; }
+  .contact-popup__cross_desk {
+    display: none; }
+  .contact-popup__cross_mobile {
+    position: absolute;
+    display: block;
+    top: 0px;
+    right: 0px; }
+    .contact-popup__cross_mobile::before, .contact-popup__cross_mobile::after {
+      background-color: black; }
+  .contact-popup__subtitle {
+    margin-bottom: 0; }
+  .contact-popup__black {
+    height: 100%;
+    width: 100%;
+    animation: ease 1s contacts__popup_white_mobile; }
+  .popup-black__black_container {
+    width: 320px; }
+  .contact-popup__form {
+    font-size: 1.8rem;
+    width: 100%; }
+    .contact-popup__form input {
+      width: 100%; }
+    .contact-popup__form textarea {
+      width: 100%; }
+    .contact-popup__form button {
+      width: 100%; } }
+
+@media (max-width: 767px) {
+  .first__contacts {
+    display: none; }
+  .works__container {
+    flex-direction: column; }
+  .card__pair {
+    flex-direction: column; }
+  .footer__el:not(:last-child) {
+    margin-right: 10px; }
+  .footer__link {
+    font-size: 2.1rem; }
+  .first__container {
+    justify-content: center;
+    padding: 20px; } }
+
+@media (max-width: 575px) {
+  .first__container {
+    justify-content: center;
+    padding-left: 60px; } }
+
+.footer {
+  height: 400px;
+  background-color: #1c1d25;
+  width: 100%; }
+
+.footer__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px; }
+
+.footer__logo {
+  font-size: 7.2rem;
+  color: inherit;
+  margin-bottom: 20px;
+  -webkit-text-stroke: 2px #b0b2c3;
+  -webkit-text-fill-color: transparent; }
+
+.footer__menu {
+  margin-bottom: 30px; }
+
+.footer__list {
+  display: flex;
+  font-size: 2.1rem;
+  justify-content: space-between;
+  width: 370px; }
+
+.footer__el {
+  color: #b0b2c3;
+  transition: ease 0.3s; }
+  .footer__el:hover {
+    color: white; }
+
+.footer__link {
+  color: inherit;
+  font-size: 2.4rem;
+  font-weight: 600; }
+
+.footer__copyright {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center; }

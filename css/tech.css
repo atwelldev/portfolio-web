@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 html {
-  font-family: League Spartan, Helvetica, Arial, sans-serif;
+  font-family: Bitter, Helvetica, Arial, sans-serif;
   color: white;
   scroll-behavior: smooth; }
 
@@ -88,7 +88,6 @@ html {
   margin-bottom: 30px; }
 
 .button {
-  background: linear-gradient(to right, cyan, #b0ffff);
   height: 60px;
   width: 200px;
   font-size: 2.1rem;
@@ -96,21 +95,11 @@ html {
   color: black;
   transition: 0.3s ease;
   position: relative;
-  border-radius: 10px;
-  overflow: hidden; }
+  border-radius: 20px;
+  background: -webkit-linear-gradient(60deg, cyan, #6fffff, #b7ffff);
+  background: linear-gradient(60deg, cyan, #8affff, #b7ffff); }
   .button:hover {
-    transform: scale(1.05, 1.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
-  .button::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 40%;
-    height: 300%;
-    top: -60px;
-    left: -200px;
-    transition: 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.7);
-    transform: rotate(45deg); }
-  .button:hover::before {
-    transform: translate(450px, 0) rotate(45deg); }
+    transform: scale(1.1, 1.1);
+    box-shadow: -5px -5px 0 rgba(0, 255, 255, 0.5), -10px -10px 0 rgba(0, 255, 255, 0.1); }
+  .button:hover::after {
+    animation: none; }

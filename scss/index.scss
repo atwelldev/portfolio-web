@@ -10,7 +10,9 @@ body._scrollDisable {
 }
 // First
 .first {
-    background-color: $mainDark;
+    // background-color: $mainDark;
+    background: -webkit-linear-gradient(171deg, #1c1d25,#0f0f14);
+    background: linear-gradient(171deg, #1c1d25,#0f0f14);
     display: flex;
     align-items: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.4);
@@ -22,31 +24,31 @@ body._scrollDisable {
 
 }
 .first__paral_top {
-    width: 100%;
+    width: 400%;
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -1000px;
     z-index: 0;
     background: url(../img/svg/spaceBot.svg);
     //background-size: 30%;
-    ._mobile & {
-        animation: backUp ease 4s infinite alternate;
+    & {
+        animation: backUp linear 70s infinite alternate;
     }
     
 }
 .first__paral_bot {
-    width: 100%;
+    width: 400%;
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -1000px;
     z-index: 0;
     background: url(../img/svg/spaceTop.svg);
     //background-size: 70%;
     
-    ._mobile & {
-        animation: backUp ease 4s infinite alternate-reverse;
+    & {
+        animation: backUp linear 70s infinite alternate-reverse;
     }
 }
 .first__text {
@@ -59,19 +61,42 @@ body._scrollDisable {
     padding-left: 100px;
     justify-content: space-between;
     align-items: center;
-    
-
 }
+
+.first__container._intersection {
+    // animation: appear ease 2s;
+}
+
 .first__title {
     letter-spacing: 2px;
     line-height: 70px;
+
+    animation: appear ease 1s;
+    
 }
 .first__paragraph {
     font-style: italic;
     color: $subLightText;
     font-weight: 300;
+
+    animation: appear ease 1.3s;
 }
 .first__button {
+    margin-top: 40px;
+    animation: appear ease 1.5s;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border: 2px solid rgba(0, 255, 255, 0.5);
+        border-radius: $buttonRadius;
+        animation: buttonAttention ease 1.5s infinite;
+    }
+    
 }
 .first__contacts {
     margin-right: 60px;
@@ -423,13 +448,20 @@ body._scrollDisable {
     position: relative;
     z-index: 988;
 }
+
+
+
 .works__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    
+    animation: worksConveer 15s linear alternate infinite;
 
+}
+
+.works__container._disable {
+    animation-play-state: paused;
 }
 .card__pair {
     display: flex;
@@ -499,7 +531,7 @@ body._scrollDisable {
 
     &::before {
         color: white;
-        font-size: 12rem;
+        font-size: 5.4rem;
         position: absolute;
         font-weight: 700;
         right: 30px;
@@ -535,7 +567,7 @@ body._scrollDisable {
         content: "03";
     }
     & .works__card:nth-child(2)::before {
-        content: "04";
+        content: "Bolotny.com";
     }
 }
 

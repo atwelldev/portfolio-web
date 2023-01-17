@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 html {
-  font-family: League Spartan, Helvetica, Arial, sans-serif;
+  font-family: Bitter, Helvetica, Arial, sans-serif;
   color: white;
   scroll-behavior: smooth; }
 
@@ -88,7 +88,6 @@ html {
   margin-bottom: 30px; }
 
 .button {
-  background: linear-gradient(to right, cyan, #b0ffff);
   height: 60px;
   width: 200px;
   font-size: 2.1rem;
@@ -96,24 +95,14 @@ html {
   color: black;
   transition: 0.3s ease;
   position: relative;
-  border-radius: 10px;
-  overflow: hidden; }
+  border-radius: 20px;
+  background: -webkit-linear-gradient(60deg, cyan, #6fffff, #b7ffff);
+  background: linear-gradient(60deg, cyan, #8affff, #b7ffff); }
   .button:hover {
-    transform: scale(1.05, 1.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
-  .button::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 40%;
-    height: 300%;
-    top: -60px;
-    left: -200px;
-    transition: 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.7);
-    transform: rotate(45deg); }
-  .button:hover::before {
-    transform: translate(450px, 0) rotate(45deg); }
+    transform: scale(1.1, 1.1);
+    box-shadow: -5px -5px 0 rgba(0, 255, 255, 0.5), -10px -10px 0 rgba(0, 255, 255, 0.1); }
+  .button:hover::after {
+    animation: none; }
 
 body._scrollDisable {
   overflow: hidden; }
@@ -122,7 +111,8 @@ body._scrollDisable {
   flex: 1 1 auto; }
 
 .first {
-  background-color: #1c1d25;
+  background: -webkit-linear-gradient(171deg, #1c1d25, #0f0f14);
+  background: linear-gradient(171deg, #1c1d25, #0f0f14);
   display: flex;
   align-items: center;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
@@ -132,26 +122,26 @@ body._scrollDisable {
   height: 100vh; }
 
 .first__paral_top {
-  width: 100%;
+  width: 400%;
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -1000px;
   z-index: 0;
   background: url(../img/svg/spaceBot.svg); }
-  ._mobile .first__paral_top {
-    animation: backUp ease 4s infinite alternate; }
+  .first__paral_top {
+    animation: backUp linear 70s infinite alternate; }
 
 .first__paral_bot {
-  width: 100%;
+  width: 400%;
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -1000px;
   z-index: 0;
   background: url(../img/svg/spaceTop.svg); }
-  ._mobile .first__paral_bot {
-    animation: backUp ease 4s infinite alternate-reverse; }
+  .first__paral_bot {
+    animation: backUp linear 70s infinite alternate-reverse; }
 
 .first__text {
   z-index: 1; }
@@ -166,12 +156,29 @@ body._scrollDisable {
 
 .first__title {
   letter-spacing: 2px;
-  line-height: 70px; }
+  line-height: 70px;
+  animation: appear ease 1s; }
 
 .first__paragraph {
   font-style: italic;
   color: #b0b2c3;
-  font-weight: 300; }
+  font-weight: 300;
+  animation: appear ease 1.3s; }
+
+.first__button {
+  margin-top: 40px;
+  animation: appear ease 1.5s;
+  position: relative; }
+  .first__button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    border-radius: 20px;
+    animation: buttonAttention ease 1.5s infinite; }
 
 .first__contacts {
   margin-right: 60px;
@@ -455,7 +462,11 @@ body._scrollDisable {
 .works__container {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  animation: worksConveer 15s linear alternate infinite; }
+
+.works__container._disable {
+  animation-play-state: paused; }
 
 .card__pair {
   display: flex;
@@ -502,7 +513,7 @@ body._scrollDisable {
     opacity: 1; }
   .works__card::before {
     color: white;
-    font-size: 12rem;
+    font-size: 5.4rem;
     position: absolute;
     font-weight: 700;
     right: 30px;
@@ -516,7 +527,7 @@ body._scrollDisable {
   content: "03"; }
 
 .card__pair_2 .works__card:nth-child(2)::before {
-  content: "04"; }
+  content: "Bolotny.com"; }
 
 .works__img {
   box-shadow: 0 0 10px black;

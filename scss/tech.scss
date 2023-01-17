@@ -60,7 +60,7 @@ html {
 // Button
 .button {
     //background: linear-gradient(to right, rgb(52, 207, 156), rgb(140, 203, 182));
-    background: linear-gradient(to right, cyan, rgb(176, 255, 255));
+    // background: linear-gradient(to right, cyan, #b0ffff);
     height: 60px;
     width: 200px;
     font-size: 2.1rem;
@@ -69,27 +69,37 @@ html {
     transition: $hoverTrans ease;
     position: relative;
     border-radius: $buttonRadius;
-    overflow: hidden;
-    &:hover {
-        transform: scale(1.05, 1.05);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-    }
-
+    // overflow: hidden;
+    background: -webkit-linear-gradient(60deg, cyan,#6fffff,#b7ffff);
+    background: linear-gradient(60deg, cyan,#8affff,#b7ffff);
     &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 40%;
-        height: 300%;
-        top: -60px;
-        left: -200px;
-        transition: $hoverTrans ease;
-        background-color: rgba(255,255,255, 0.7);
-        transform: rotate(45deg);
+
     }
+    &:hover {
+        transform: scale(1.1, 1.1);
+        box-shadow: -5px -5px 0 rgba(0, 255, 255, 0.5), -10px -10px 0 rgba(0, 255, 255, 0.1)
+        
+    }
+    &:hover::after {
+        animation: none;
+        
+    }
+
+
+    // &::before {
+    //     content: "";
+    //     display: block;
+    //     position: absolute;
+    //     width: 40%;
+    //     height: 300%;
+    //     top: -60px;
+    //     left: -200px;
+    //     transition: $hoverTrans ease;
+    //     background-color: rgba(255,255,255, 0.7);
+    //     transform: rotate(45deg);
+    // }
     
-    &:hover::before {
-        transform: translate(450px, 0) rotate(45deg); 
-    }
+    // &:hover::before {
+    //     transform: translate(450px, 0) rotate(45deg); 
+    // }
 }

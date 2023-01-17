@@ -9,6 +9,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=League+Spartan:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Bitter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cousine:regular,italic,700,700italic" rel="stylesheet" />
+
     <!-- Copyright -->
 
     <!-- Styles -->
@@ -92,7 +94,7 @@
             <section class="first _section">
                 <div class="first__paral_top"></div>
                 <div class="first__paral_bot"></div>
-                <div class="first__container _container">
+                <div class="first__container _container" id="firstInter"> 
                     <div class="first__text">
                         <h1 class="first__title title">
                             Денис Жукавин
@@ -183,10 +185,10 @@
             <!-- Works -->
             <h1 class="works__ref">some cases</h1>
             <section class="works">
-                <div class="works__container">
+                <div class="works__container" id="worksInter">
                     <div class="card__pair">
                         <!-- card_1 -->
-                        <div class="works__card">
+                        <div class="works__card" onmouseover="document.querySelector('.works__container').classList.toggle('_disable')">
                             <div class="works__img">
                                 <img src="https://images.squarespace-cdn.com/content/v1/542032d5e4b0968055ce5118/1590821174418-EN1TWKVGTXP9AAVN7NDI/image-asset.jpeg" alt=""> 
                             </div>
@@ -223,7 +225,7 @@
                             </div>
                         </div>
                         <!-- card_4 -->
-                        <div class="works__card">
+                        <div class="works__card" onmouseover="document.querySelector('.works__container').classList.add('_disable')" onmouseout="document.querySelector('.works__container').classList.remove('_disable')">
                             <div class="works__img">
                                 <img src="https://learn.g2.com/hubfs/iStock-685053710.jpg" alt=""> 
                             </div>

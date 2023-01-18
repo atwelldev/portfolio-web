@@ -1,3 +1,7 @@
+.footer {
+  background: -webkit-linear-gradient(171deg, #1c1d25, #0a0a0d);
+  background: linear-gradient(171deg, #1c1d25, #0a0a0d); }
+
 @media (max-width: 1520px) {
   .works__container {
     flex-direction: column; } }
@@ -65,8 +69,8 @@
 
 .footer {
   height: 400px;
-  background-color: #1c1d25;
-  width: 100%; }
+  width: 100%;
+  box-shadow: 0px -30px 30px rgba(0, 0, 0, 0.7); }
 
 .footer__block {
   display: flex;

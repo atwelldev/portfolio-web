@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=League+Spartan:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Bitter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Cousine:regular,italic,700,700italic" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
     <!-- Copyright -->
 
     <!-- Styles -->
@@ -25,37 +25,31 @@
 </head>
 <body>
         <!-- Mobile menu -->
-        <div class="mobile">
-        <nav class="mobile__menu">
-            <ul class="mobile__list">
-                <li class="mobile__el">
-                    <a href="" class="mobile__link">Home</a>
+        <div class="mobile-menu">
+            <div class="mobile-menu__burger_container">
+                <div class="mobile-menu__burger">
+                    <span></span>
+                </div>
+            </div>
+            <ul class="mobile-menu__contacts">
+                <li>
+                    <a href=""><i class="fa-solid fa-phone"></i></a>
                 </li>
-                <li class="mobile__el">
-                    <a href="" class="mobile__link">Case</a>
+                <li>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
                 </li>
-                <li class="mobile__el">
-                    <a href="" class="mobile__link">Experiments</a>
+                <li>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
                 </li>
-                <li class="mobile__el">
-                    <a href="" class="mobile__link">Contact</a>
+                <li>
+                    <a href=""><i class="fa-brands fa-google"></i></a>
                 </li>
-            </ul>
-        </nav>
-        <div class="mobile__contacts">
-            <ul class="mobile__socialmenu">
-                <li class="mobile__social">
-                    <i class="fa-brands fa-square-github"></i>
-                </li>
-                <li class="mobile__social">
-                    <i class="fa-brands fa-instagram"></i>
-                </li>
-                <li class="mobile__social">
-                    <i class="fa-brands fa-linkedin-in"></i>
+                <li>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
                 </li>
             </ul>
         </div>
-    </div>
+
     <div class="wrapper">
 
         <header class="header">
@@ -80,10 +74,6 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- Header burger -->
-                <div class="header__burger">
-                    <span></span>
-                </div>
             </div>
 
         </header>
@@ -107,26 +97,27 @@
                     <!-- <div class="first__img">
                         <img src="/img/svg/gd.svg" alt="">
                     </div> -->
+                    <ul class="first__contacts">
+                        <li class="first__el">
+                            <a href="https://github.com/DWellG1t"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li class="first__el">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </li>
+                        <li class="first__el">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </li>
+                        <li class="first__el">
+                            <i class="fa-brands fa-instagram"></i>
+                        </li>
+                        <li class="first__el">
+                            <i class="fa-brands fa-google-plus-g"></i>                                    
+                        </li>
+                </ul>
                 </div>
 
                 <!-- Contact menu -->
-                <ul class="first__contacts">
-                    <li class="first__el">
-                        <a href="https://github.com/DWellG1t"><i class="fa-brands fa-github"></i></a>
-                    </li>
-                    <li class="first__el">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </li>
-                    <li class="first__el">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </li>
-                    <li class="first__el">
-                        <i class="fa-brands fa-instagram"></i>
-                    </li>
-                    <li class="first__el">
-                        <i class="fa-brands fa-google-plus-g"></i>                                    
-                    </li>
-            </ul>
+
             </section>
             
             <!-- Contact PopUp -->
@@ -182,60 +173,153 @@
                 </div>
             </div>
 
+            <!-- section rates -->
+            <section class="section-rates">
+                <div class="section-rates__ref">Услуги</div>
+                <div class="section-rates__container _container">
+                    <ul class="section-rates__list">
+                        <!-- el 1 -->
+                        <li class="section-rates__el">
+                            <div class="section-rates__titlebox">
+                                <h1 class="section-rates__title">Разработка сайта</h1>
+                                <div class="section-rates__cross">
+                                </div>
+                            </div>
+                            <ul class="section-rates__text">
+                                <li class="section-rates__text_el">
+                                    <p class="section-rates__par">лэндинг</p>
+                                    <p class="section-rates__price">1800р</p>   
+                                </li>
+
+                                <li class="section-rates__text_el">
+                                    <p class="section-rates__par">интернет-магазин</p>
+                                    <p class="section-rates__price">20000р</p>   
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <!-- el 2 -->
+
+                        <li class="section-rates__el">
+                            <div class="section-rates__titlebox">
+                                <h1 class="section-rates__title">Поддержка сайта</h1>
+                                <div class="section-rates__cross">
+                                </div>
+                            </div>
+                            <ul class="section-rates__text">
+                                <li class="section-rates__text_el">
+                                    <p class="section-rates__par">лэндинг</p>
+                                    <p class="section-rates__price">1800р</p>   
+                                </li>
+
+                                <li class="section-rates__text_el">
+                                    <p class="section-rates__par">интернет-магазин</p>
+                                    <p class="section-rates__price">20000р</p>   
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <!-- el 3 -->
+
+                        <li class="section-rates__el">
+                            <div class="section-rates__titlebox">
+                                <h1 class="section-rates__title">Продвижение сайта</h1>
+                                <div class="section-rates__cross">
+                                </div>
+                            </div>
+                            <ul class="section-rates__text">
+                                <li class="section-rates__text_el">
+                                    <p class="section-rates__par">лэндинг</p>
+                                    <p class="section-rates__price">1800р</p>   
+                                </li>
+
+                                <li class="section-rates__text_el">
+                                    <p class="section-rates__par">интернет-магазин</p>
+                                    <p class="section-rates__price">20000р</p>   
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <!-- el 4 -->
+
+                        
+                        <li class="section-rates__el">
+                            <div class="section-rates__titlebox">
+                                <h1 class="section-rates__title">Разработка бота</h1>
+                                <div class="section-rates__cross">
+                                </div>
+                            </div>
+                            <ul class="section-rates__text">
+                                <li class="section-rates__text_el">
+                                    <p class="section-rates__par">лэндинг</p>
+                                    <p class="section-rates__price">1800р</p>   
+                                </li>
+
+                                <li class="section-rates__text_el">
+                                    <p class="section-rates__par">интернет-магазин</p>
+                                    <p class="section-rates__price">20000р</p>   
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+
             <!-- Works -->
-            <h1 class="works__ref">some cases</h1>
             <section class="works">
                 <div class="works__container" id="worksInter">
-                    <div class="card__pair">
-                        <!-- card_1 -->
-                        <div class="works__card" onmouseover="document.querySelector('.works__container').classList.toggle('_disable')">
-                            <div class="works__img">
-                                <img src="https://images.squarespace-cdn.com/content/v1/542032d5e4b0968055ce5118/1590821174418-EN1TWKVGTXP9AAVN7NDI/image-asset.jpeg" alt=""> 
-                            </div>
-                            <div class="works__text">
-                                <h1 class="works__title title"><a href="http://localhost:5500/project.html">bolotny</a></h1>
-                                <p class="works__paragraph paragraph">site of architecture ms. Boltny</p>
-                            </div>
-                            <!-- popup 1 -->
-                            <div class="works-popup works-popup_1">
-                                works-popup__container
-                            </div>
-                        </div>
-                        <!-- card_2 -->
-                        <div class="works__card">
-                            <div class="works__img">
-                                <img src="img/jpeg/bolot.jpg" alt=""> 
-                            </div>
-                            <div class="works__text">
-                                <h1 class="works__title title">bolotny</h1>
-                                <p class="works__paragraph paragraph">site of architecture ms. Boltny</p>
-                            </div>
+                        
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
                         </div>
                     </div>
-                    <!-- 2 pair -->
-                    <div class="card__pair card__pair_2">
-                        <!-- card_3 -->
-                        <div class="works__card">
-                            <div class="works__img">
-                                <img src="https://media.cntraveler.com/photos/593af2d9986db21b5a8a00dc/master/w_2048,h_1536,c_limit/architecture-cities-athens-GettyImages-96378600.jpg" alt=""> 
-                            </div>
-                            <div class="works__text">
-                                <h1 class="works__title title">bolotny</h1>
-                                <p class="works__paragraph paragraph">site of architecture ms. Boltny</p>
-                            </div>
-                        </div>
-                        <!-- card_4 -->
-                        <div class="works__card" onmouseover="document.querySelector('.works__container').classList.add('_disable')" onmouseout="document.querySelector('.works__container').classList.remove('_disable')">
-                            <div class="works__img">
-                                <img src="https://learn.g2.com/hubfs/iStock-685053710.jpg" alt=""> 
-                            </div>
-                            <div class="works__text">
-                                <h1 class="works__title title">bolotny</h1>
-                                <p class="works__paragraph paragraph">site of architecture ms. Boltny</p>
-                            </div>
+
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/gmdatwop.beget.tech_.png" alt=""> 
                         </div>
                     </div>
+                    
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
+                        </div>
+                    </div>
+
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/gmdatwop.beget.tech_.png" alt=""> 
+                        </div>
+                    </div>
+
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
+                        </div>
+                    </div>
+
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
+                        </div>
+                    </div>
+
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
+                        </div>
+                    </div>
+
+     
+
                 </div>
+
             </section>
             
         </main>

@@ -95,12 +95,12 @@ html {
   color: black;
   transition: 0.3s ease;
   position: relative;
-  border-radius: 20px;
+  border-radius: 10px;
   background: -webkit-linear-gradient(60deg, cyan, #6fffff, #b7ffff);
   background: linear-gradient(60deg, cyan, #8affff, #b7ffff); }
   .button:hover {
     transform: scale(1.1, 1.1);
-    box-shadow: -5px -5px 0 rgba(0, 255, 255, 0.5), -10px -10px 0 rgba(0, 255, 255, 0.1); }
+    box-shadow: -5px -5px 0 rgba(0, 255, 255, 0.6), -10px -10px 0 rgba(0, 255, 255, 0.3); }
   .button:hover::after {
     animation: none; }
 

@@ -28,7 +28,10 @@ $subGradient: aquamarine;
 $hoverTrans: 0.3s;
 
 // Border
-$blockRadius: 20px;
-$buttonRadius: 20px;
+$blockRadius: 10px;
+$buttonRadius: 10px;
 
-
+%backGrad {
+    background: -webkit-linear-gradient(171deg, #1c1d25,#0a0a0d);
+    background: linear-gradient(171deg, #1c1d25,#0a0a0d);
+}

@@ -29,6 +29,13 @@ else {
 // const first: any = document.querySelector(".first");
 // // set height of 
 // first.style.height = `${window.innerHeight}px`;
+// mobile menu
+var mobileMenu = document.querySelector(".mobile-menu");
+var burger = document.querySelector(".mobile-menu__burger");
+burger.addEventListener("click", function () {
+    mobileMenu.classList.toggle("_active");
+    burger.classList.toggle("_active");
+});
 // Mouse move
 var paralTop = document.querySelector(".first__paral_top");
 var paralBot = document.querySelector(".first__paral_bot");
@@ -93,7 +100,7 @@ crossPopup.forEach(function (el) {
 // const lightSwitch = document.querySelector(".header__el_switch");
 // lightSwitch.addEventListener("click", () => { document.querySelector("body").classList.toggle("_white");  })
 // Works__ref
-document.querySelector(".works__ref").addEventListener("click", function (event) { window.scroll(0, window.innerHeight - 200); });
+// document.querySelector(".works__ref").addEventListener("click", event => { window.scroll(0, window.innerHeight - 200);})
 // Works
 // const workCardButton = document.querySelector(".works__button");
 // workCardButton.addEventListener("click", () => { document.querySelector('.works-popup_1').classList.toggle("works-popup_1_active"); document.querySelector(".header").style.display = "none"; })
@@ -114,3 +121,22 @@ var Observer = new IntersectionObserver(function (entires) {
 });
 Observer.observe(document.querySelector("#worksInter"));
 Observer.observe(document.querySelector("#firstInter"));
+// works card
+var cards = document.querySelectorAll(".works__card");
+cards.forEach(function (el) {
+    el.addEventListener("mouseover", function () {
+        document.querySelector('.works__container').classList.toggle('_disable');
+    });
+    el.addEventListener("mouseout", function () {
+        document.querySelector('.works__container').classList.toggle('_disable');
+    });
+});
+// section-rates
+var crossArr = document.querySelectorAll(".section-rates__cross");
+var textArr = document.querySelectorAll(".section-rates__text");
+crossArr.forEach(function (el, ind) {
+    el.addEventListener("click", function () {
+        el.classList.toggle("_active");
+        textArr[ind].classList.toggle("_active");
+    });
+});

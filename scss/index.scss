@@ -8,11 +8,102 @@ body._scrollDisable {
 .main {
     flex: 1 1 auto;
 }
+
+
+// mobile-menu 
+.mobile-menu {
+    position: fixed;
+    height: 100%;
+    width: 70px;
+    right: -70px;
+    top: 0;
+    z-index: 1000;
+    @extend %backGrad;
+    transition: ease $hoverTrans;
+    box-shadow: -10px 0 10px rgba(0,0,0,0.5)
+}
+.mobile-menu._active {
+    right: 0;
+}
+
+.mobile-menu__burger_container {
+    position: absolute;
+    top: 50px;
+    left: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: #1c1d25;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: $blockRadius 0 0 $blockRadius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobile-menu__burger {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: $hoverTrans ease;
+
+    span, &::before, &::after {
+        height: 2px;
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        transition: $hoverTrans ease;
+
+    }
+    span {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    &::before, &::after {
+        content: "";
+    }
+    &::before {
+        top: 0;
+    }
+    &::after {
+        bottom: 0;
+    }
+}
+
+.mobile-menu__burger._active {
+    span {
+        opacity: 0;
+    }
+    &::before {
+        top: 50%;
+        transform: translate(0, -50%) rotate(45deg);
+    }
+    &::after {
+        transform: translate(0, 50%) rotate(-45deg);
+        bottom: 50%;
+    }
+}
+.mobile-menu__contacts {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    li:not(:last-child) {
+        margin-bottom: 25px;
+    }
+    li {
+        font-size: 2.7rem;
+    }
+    li a {
+        color: inherit;
+    }
+}
+
+
 // First
 .first {
     // background-color: $mainDark;
-    background: -webkit-linear-gradient(171deg, #1c1d25,#0f0f14);
-    background: linear-gradient(171deg, #1c1d25,#0f0f14);
+    @extend %backGrad;
     display: flex;
     align-items: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.4);
@@ -99,7 +190,7 @@ body._scrollDisable {
     
 }
 .first__contacts {
-    margin-right: 60px;
+    // margin-right: 1000px;
     z-index: 20;
 }
 .first__el {
@@ -155,7 +246,7 @@ body._scrollDisable {
         content: "";
         background-color: white;
         width: 100%;
-        height: 10%;
+        height: 2px;
         position: absolute;
         top: 50%;
         transition: $hoverTrans ease;
@@ -330,7 +421,7 @@ body._scrollDisable {
 
 // Black
 .contact-popup__black {
-    background-color: $mainDark;
+    @extend %backGrad;
     width: 50%;
     display: flex;
     align-items: center;
@@ -409,41 +500,135 @@ body._scrollDisable {
 }
 // contact popup mobile
 
-// Works
-.works__ref {
+// rates
+.section-rates {
+    box-shadow: 0px -30px 30px rgba(0,0,0, 0.7);
+    width: 100%;
+    // @extend %backGrad;
+    position: relative;
+    padding-top: 80px;
+
+    // background: -webkit-linear-gradient(171deg, #1c1d25,#0a0a0d);
+    background: url("/img/svg/rates-space.svg") center center, linear-gradient(171deg, #1c1d25,#0a0a0d);
+
+}
+.section-rates__ref {
     position: absolute;
-    color: $subLightText;
-    font-size: 4.2rem;
     left: 50%;
-    transform: translate(-50%, -110px);
-    font-weight: 200;
+    top: -80px;
+    transform: translate(-50%, 0);
+    font-size: 2.1rem;
+    z-index: 0;
     cursor: pointer;
-    transition: ease $hoverTrans;
-    &::after {
-        content: "";
-        display: block;
-        height: 100px;
-        width: 1px;
-        background-color: white;
-        margin: 10px auto;
-        transition: ease $hoverTrans;
-        //pointer-events: none;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
+    transition: $hoverTrans ease;
+    &:hover {
+        transform: translate(-50%, -20px) scale(1.5, 1.5);
+
     }
-    
     &:hover::after {
         height: 0;
+        animation: none;
     }
-    &:hover {
-        transform: translate(-50%, -130px) scale(1.3, 1.3);
-        color: white;
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 50%;
+        top: 35px;
+        transform: translate(-50%, 0);
+        
+        height: 45px;
+        width: 1px;
+        background-color: white;
+
+        // animation: refScale ease 1s infinite alternate;
     }
 }
+
+.section-rates__container {
+    height: 700px;
+    padding: 0 50px;
+    box-sizing: content-box;
+}
+
+.section-rates__list {
+    
+}
+.section-rates__el {
+    margin-bottom: 60px;
+}
+.section-rates__titlebox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.section-rates__title {
+    font-size: 3rem;
+    font-weight: 600;
+}
+.section-rates__cross {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    transition: $hoverTrans ease;
+    cursor: pointer;
+
+    &:hover::after {
+        // transform: translate(0, -50%);
+    }
+
+    &:hover::before {
+        // transform: translate(0, -50%) rotate(90deg);
+    }
+
+    &::after, &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $mainLightText;
+        top: 50%;
+        left: 0;
+        transition: $hoverTrans ease;
+    }
+    &::after {
+        transform: translate(0, -50%) rotate(0deg);
+    }
+    &::before {
+        transform: translate(0, -50%) rotate(90deg);
+    }
+}
+.section-rates__cross._active {
+    transform: rotate(45deg);
+}
+.section-rates__text {
+    height: 0;
+    overflow: hidden;
+    transition: $hoverTrans ease;
+}
+
+.section-rates__text._active {
+    height: 60px;
+}
+.section-rates__text_el {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.section-rates__par {
+}
+.section-rates__price {
+}
+
+
+// Works
 .works {
     box-shadow: 0px -30px 30px rgba(0,0,0, 0.7);
-    background-color: $mainDark;
+    // background-color: $mainDark;
+    @extend %backGrad;
     width: 100%;
     position: relative;
     z-index: 988;
@@ -453,7 +638,7 @@ body._scrollDisable {
 
 .works__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 
     animation: worksConveer 15s linear alternate infinite;
@@ -472,14 +657,15 @@ body._scrollDisable {
 
 
 .works__card {
+    flex-shrink: 0;
     border-radius: 20px;
-    transform: translate(0, -20px);
-    flex-grow: 1;
-    width: 100%;
-    height: 450px;
+    // transform: translate(0, -20px);
+    // flex-grow: 1;
+    width: 350px;
+    height: 350px;
     box-shadow: -5px 0 10px rgba(0,0,0,0.4);
     position: relative;
-    padding: 40px;
+    // padding: 40px;
     background-color: $mainDark;
     display: flex;
     flex-direction: column;
@@ -487,51 +673,37 @@ body._scrollDisable {
     justify-content: space-between;
     cursor: pointer;
     transition: $hoverTrans ease;
+    overflow: visible;
 
     &:hover {
-        transform: translate(0, -120px);
+        transform: translate(0, -70px);
+
+        .works__img img {
+            animation: imgScroll 10s linear alternate infinite;
+            // transition: 10s ease;
+            // transform: translate(0, -70%);
+        }
     }
 
-    &:hover:nth-child(2n+1) {
-        transform: translate(0, -120px);
-    }
-
-    &:nth-child(1) {
-        z-index: 1;
-        transform: translate(0, -10px);
-
-    }
-    &:nth-child(2) {
-        z-index: 2;
-
-
-    }
-    &:nth-child(3) {
-        z-index: 3;
-        transform: translate(0, -10px);
-
-    }
-    &:nth-child(4) {
-        z-index: 4;
-
-    }
 
     &:nth-child(1)::before {
-        content: "01";
+        content: "Свечи и ароматы";
+        // font-size: 4rem;
     }
-    &:nth-child(2)::before {
-        content: "02";
+    // delegte
+    &::before {
+        content: "Свечи и ароматы";
+        
     }
     
-
     &:hover::before {
-        transform: translate(0, -80px);
+        transform: translate(0, -60px);
         opacity: 1;
     }
 
     &::before {
         color: white;
-        font-size: 5.4rem;
+        font-size: 3.7rem;
         position: absolute;
         font-weight: 700;
         right: 30px;
@@ -541,50 +713,25 @@ body._scrollDisable {
         z-index: 100;
         text-shadow: 0 0 10px rgba(0,0,0,1);
     }   
-    // &::after {
-    //     content: "";
-    //     display: block;
-    //     position: absolute;
-    //     left: 0;
-    //     top: 0;
-    //     width: 10%;
-    //     height: 100%;
-    //     background: rgba(255,255,255,1);
-    //     transition: ease 0.5s;
-    //     opacity: 0;
 
-    // }
-    // &:hover::after {
-
-    // }
-
-    
-
-}
-
-.card__pair_2 {
-    & .works__card:nth-child(1)::before {
-        content: "03";
-    }
-    & .works__card:nth-child(2)::before {
-        content: "Bolotny.com";
-    }
 }
 
 .works__img {
-    box-shadow: 0 0 10px black;
-    width: 300px;
-    height: 300px;
+    // box-shadow: 0 0 10px black;
+    // border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 100%;
     position: relative;
     overflow: hidden;
-    border-radius: 50%;
+    // border-radius: 50%;
     & img {
         width: 100%;
-        height: 100%;
+        height: 400%;
         position: absolute;
         left: 0;
         top: 0;
         object-fit: cover;
+        
     }
 }
 .works__text {

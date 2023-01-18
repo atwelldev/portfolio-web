@@ -14,17 +14,15 @@ var Header = /** @class */ (function () {
 }());
 var headerIns = new Header(document.querySelector(".header"), document.querySelector(".header__burger"), document.querySelector(".mobile"), document.querySelector(".header__logo"));
 // Header animation
-var lastYOffset = 0;
-document.addEventListener("scroll", function () {
-    var _a, _b;
-    if (lastYOffset >= window.pageYOffset) {
-        (_a = headerIns.header) === null || _a === void 0 ? void 0 : _a.classList.remove("header_active");
-    }
-    else {
-        (_b = headerIns.header) === null || _b === void 0 ? void 0 : _b.classList.add("header_active");
-    }
-    lastYOffset = window.pageYOffset;
-});
+// let lastYOffset: Number = 0;
+// document.addEventListener("scroll", () => { 
+//     if (lastYOffset >= window.pageYOffset) {
+//         headerIns.header?.classList.remove("header_active")
+//     } else {
+//         headerIns.header?.classList.add("header_active")
+//     }
+//     lastYOffset = window.pageYOffset
+// })
 // Header burger
 headerIns.burger.addEventListener("click", function () {
     headerIns.mobile.classList.toggle("mobile_active");

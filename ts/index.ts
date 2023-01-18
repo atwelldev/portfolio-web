@@ -32,6 +32,15 @@ if (isMobile.any()) {
 // // set height of 
 // first.style.height = `${window.innerHeight}px`;
 
+// mobile menu
+const mobileMenu: any = document.querySelector(".mobile-menu");
+const burger: any = document.querySelector(".mobile-menu__burger");
+burger.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("_active");
+    burger.classList.toggle("_active");
+});
+
 // Mouse move
 const paralTop: Element = document.querySelector(".first__paral_top");
 const paralBot: Element = document.querySelector(".first__paral_bot");
@@ -120,7 +129,7 @@ crossPopup.forEach( el => { el.addEventListener("click", () => {
 
 
 // Works__ref
-document.querySelector(".works__ref").addEventListener("click", event => { window.scroll(0, window.innerHeight - 200);})
+// document.querySelector(".works__ref").addEventListener("click", event => { window.scroll(0, window.innerHeight - 200);})
 
 // Works
 // const workCardButton = document.querySelector(".works__button");
@@ -145,3 +154,25 @@ const Observer: IntersectionObserver = new IntersectionObserver((entires) => {
 
 Observer.observe(document.querySelector("#worksInter"));
 Observer.observe(document.querySelector("#firstInter"));
+
+// works card
+const cards: any = document.querySelectorAll(".works__card");
+cards.forEach(el => {
+    el.addEventListener("mouseover", () => {
+        document.querySelector('.works__container').classList.toggle('_disable')
+    });
+    el.addEventListener("mouseout", () => {
+        document.querySelector('.works__container').classList.toggle('_disable')
+    });
+})
+
+// section-rates
+const crossArr: any = document.querySelectorAll(".section-rates__cross");
+const textArr: any = document.querySelectorAll(".section-rates__text");
+
+crossArr.forEach((el, ind) => {
+    el.addEventListener("click", () => {
+        el.classList.toggle("_active");
+        textArr[ind].classList.toggle("_active");
+    });
+})

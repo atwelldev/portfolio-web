@@ -24,15 +24,15 @@ const headerIns: Header = new Header(
 );
 
 // Header animation
-let lastYOffset: Number = 0;
-document.addEventListener("scroll", () => { 
-    if (lastYOffset >= window.pageYOffset) {
-        headerIns.header?.classList.remove("header_active")
-    } else {
-        headerIns.header?.classList.add("header_active")
-    }
-    lastYOffset = window.pageYOffset
-})
+// let lastYOffset: Number = 0;
+// document.addEventListener("scroll", () => { 
+//     if (lastYOffset >= window.pageYOffset) {
+//         headerIns.header?.classList.remove("header_active")
+//     } else {
+//         headerIns.header?.classList.add("header_active")
+//     }
+//     lastYOffset = window.pageYOffset
+// })
 
 // Header burger
 headerIns.burger.addEventListener("click", () => { 

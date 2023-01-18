@@ -4,8 +4,9 @@
 
 .footer {
     height: 400px;
-    background-color: #1c1d25;
+    @extend %backGrad;
     width: 100%;
+    box-shadow: 0px -30px 30px rgba(0,0,0, 0.7);
 }
 .footer__container {
 

@@ -1,3 +1,35 @@
+@import url(./keyframes.scss);
+@media (max-width: 1100px) {
+  .about-popup {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    overflow: scroll; }
+  .about-popup__white {
+    width: 100%;
+    border-radius: 0;
+    padding: 40px 60px; }
+  .about-popup._active .about-popup__white {
+    animation: whitePopupMob 1s ease; }
+  .about-popup__black {
+    width: 100%;
+    border-radius: 0;
+    padding: 40px 60px; }
+  .about-popup._active .about-popup__black {
+    animation: blackPopupMob 1s ease; }
+  #mobCross {
+    display: block;
+    top: 55px;
+    right: 55px; }
+  #deskCross {
+    display: none; }
+  .about-popup__el_tec {
+    margin-bottom: 30px; }
+  .about-popup__el_paragraph {
+    margin-bottom: 50px; }
+  .about-popup__el_button {
+    margin-bottom: 30px; } }
+
 @media (max-width: 767px) {
   .first__contacts {
     display: none; }
@@ -10,6 +42,43 @@
       font-size: 1.4rem; } }
 
 @media (max-width: 575px) {
+  .about-popup__white {
+    padding: 20px 20px; }
+  .about-popup__black {
+    padding: 20px 20px; }
+  #mobCross {
+    top: 30px;
+    right: 20px;
+    width: 25px;
+    height: 25px; }
+  .about-popup__el_tec {
+    flex-wrap: wrap; }
+    .about-popup__el_tec div {
+      font-size: 4.2rem;
+      margin-bottom: 40px; }
+      .about-popup__el_tec div:hover::after {
+        top: 50px !important; }
+  .about-popup__el_title {
+    font-size: 3.2rem; }
+  .about-popup__el_paragraph {
+    font-size: 1.4rem; }
+  .about-popup__form input {
+    font-size: 1.2rem; }
+  .about-popup__form textarea {
+    font-size: 1.2rem; }
+  .about-popup__name {
+    font-size: 1.4rem; }
+  .about-popup__email {
+    font-size: 1.4rem; }
+  .about-popup__mess {
+    font-size: 1.4rem; }
+  .about-popup__el_button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .about-popup__el_button button {
+      height: 50px;
+      width: 180px; }
   .first__container {
     justify-content: center;
     padding-left: 60px; }
@@ -52,7 +121,11 @@
   .section-tec__el div {
     font-size: 4.2rem; }
     .section-tec__el div::after {
-      font-size: 1.2rem; } }
+      font-size: 1.2rem; }
+  .section-rates__title {
+    font-size: 1.8rem !important; }
+  .section-rates__text_el {
+    font-size: 1.4rem; } }
 
 @media (max-width: 300px) {
   .first__container {
@@ -65,3 +138,7 @@
       font-size: 1.2rem; }
   .works__card {
     width: 300px; } }
+
+@media (orientation: landscape) {
+  body._mobile {
+    display: none; } }

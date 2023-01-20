@@ -99,3 +99,39 @@
     transform: translate(0, 200%); }
   to {
     transform: translate(0, 0); } }
+
+@keyframes whitePopupMob {
+  from {
+    transform: translate(-200%, 0); }
+  to {
+    transform: translate(0, 0); } }
+
+@keyframes blackPopupMob {
+  from {
+    transform: translate(200%, 0); }
+  to {
+    transform: translate(0, 0); } }
+
+@keyframes firstLettersUp {
+  from {
+    transform: translate(0, 3px); }
+  to {
+    transform: translate(0, -3px); } }
+
+@keyframes firstLettersDown {
+  from {
+    transform: translate(0, -3px); }
+  to {
+    transform: translate(0, 3px); } }
+
+@keyframes firstLettersUpPar {
+  from {
+    transform: translate(0, 1px); }
+  to {
+    transform: translate(0, -1px); } }
+
+@keyframes firstLettersDownPar {
+  from {
+    transform: translate(0, -1px); }
+  to {
+    transform: translate(0, 1px); } }

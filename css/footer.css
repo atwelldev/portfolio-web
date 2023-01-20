@@ -5,7 +5,10 @@
 .footer {
   height: 400px;
   width: 100%;
-  color: #b8bad0; }
+  color: #b8bad0;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); }
 
 .footer__container {
   height: 100%;
@@ -33,12 +36,17 @@
 
 .footer__el_logo {
   margin-bottom: 30px;
-  margin-top: 50px;
+  margin-top: 10px;
   font-size: 7.2rem;
-  text-align: center; }
+  text-align: center;
+  transition: ease 0.3s; }
   .footer__el_logo a {
     color: inherit;
     text-shadow: 0 0 10px black; }
+
+._desk .footer__el_logo:hover {
+  transform: scale(1.1, 1.1) translate(0, -10px);
+  color: white; }
 
 .footer__el_ip {
   font-size: 3.2rem;

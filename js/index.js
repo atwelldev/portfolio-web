@@ -30,12 +30,15 @@ else {
 // // set height of 
 // first.style.height = `${window.innerHeight}px`;
 // mobile menu
+var back = document.querySelector(".back");
 var mobileMenu = document.querySelector(".mobile-menu");
 var burger = document.querySelector(".mobile-menu__burger");
 var burgerArrow = document.querySelector(".mobile-menu__burger_container");
 burger.addEventListener("click", function () {
+    back.classList.toggle("_active");
     mobileMenu.classList.toggle("_active");
     burger.classList.toggle("_active");
+    // document.querySelector("body").classList.toggle("_scrollDisable");
     burgerArrow.classList.add("_disable");
 });
 burger.addEventListener("mouseover", function () {
@@ -46,20 +49,21 @@ burger.addEventListener("mouseout", function () {
 });
 // Contact PopUp
 var firstButton = document.querySelector(".first__button");
-var popupCross = document.querySelector(".about-popup__cross");
+var popupCross = document.querySelectorAll(".about-popup__cross");
 var popup = document.querySelector(".about-popup");
-var back = document.querySelector(".back");
 firstButton.addEventListener("click", function () {
     popup.classList.toggle("_active");
     back.classList.toggle("_active");
     document.documentElement.style.overflow = "hidden";
     mobileMenu.style.display = "none";
 });
-popupCross.addEventListener("click", function () {
-    popup.classList.toggle("_active");
-    back.classList.toggle("_active");
-    document.documentElement.style.overflow = "auto";
-    mobileMenu.style.display = "block";
+popupCross.forEach(function (el) {
+    el.addEventListener("click", function () {
+        popup.classList.toggle("_active");
+        back.classList.toggle("_active");
+        document.documentElement.style.overflow = "auto";
+        mobileMenu.style.display = "block";
+    });
 });
 // Observer
 var Observer = new IntersectionObserver(function (entires) {

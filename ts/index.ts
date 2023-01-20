@@ -33,15 +33,16 @@ if (isMobile.any()) {
 // first.style.height = `${window.innerHeight}px`;
 
 // mobile menu
+const back = document.querySelector(".back");
 const mobileMenu: any = document.querySelector(".mobile-menu");
 const burger: any = document.querySelector(".mobile-menu__burger");
 const burgerArrow: any = document.querySelector(".mobile-menu__burger_container");
 
 burger.addEventListener("click", () => {
-
+    back.classList.toggle("_active");
     mobileMenu.classList.toggle("_active");
     burger.classList.toggle("_active");
-
+    // document.querySelector("body").classList.toggle("_scrollDisable");
     burgerArrow.classList.add("_disable");
 });
 
@@ -54,9 +55,9 @@ burger.addEventListener("mouseout", () => {
 
 // Contact PopUp
 const firstButton = document.querySelector(".first__button");
-const popupCross = document.querySelector(".about-popup__cross");
+const popupCross = document.querySelectorAll(".about-popup__cross");
 const popup = document.querySelector(".about-popup");
-const back = document.querySelector(".back");
+
 
 
 firstButton.addEventListener("click", () => {
@@ -65,13 +66,15 @@ firstButton.addEventListener("click", () => {
     document.documentElement.style.overflow = "hidden";
     mobileMenu.style.display = "none";
 });
+popupCross.forEach(el => {
+    el.addEventListener("click", () => {
+        popup.classList.toggle("_active");
+        back.classList.toggle("_active");
+        document.documentElement.style.overflow = "auto";
+        mobileMenu.style.display = "block";
+    });
+})
 
-popupCross.addEventListener("click", () => {
-    popup.classList.toggle("_active");
-    back.classList.toggle("_active");
-    document.documentElement.style.overflow = "auto";
-    mobileMenu.style.display = "block";
-});
 
 
 

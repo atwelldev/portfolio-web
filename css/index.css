@@ -739,13 +739,15 @@ body._scrollDisable {
   cursor: pointer;
   transition: 0.3s ease;
   overflow: visible; }
-  .works__card:hover .works__img img {
-    animation: imgScroll 10s linear alternate infinite; }
-  .works__card:hover .works__links {
-    opacity: 1;
-    transform: translate(0, -30px); }
-  .works__card:hover::after {
-    opacity: 1; }
+  .works__card:hover {
+    transform: translate(0, -10px); }
+    .works__card:hover .works__img img {
+      animation: imgScroll 10s linear alternate infinite; }
+    .works__card:hover .works__links {
+      opacity: 1;
+      transform: translate(0, -30px); }
+    .works__card:hover::after {
+      opacity: 1; }
   .works__card::after {
     content: "";
     width: 100%;

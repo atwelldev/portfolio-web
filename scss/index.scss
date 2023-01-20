@@ -865,7 +865,7 @@ body._scrollDisable {
     overflow: visible;
 
     &:hover {
-        // transform: translate(0, -15px);
+        transform: translate(0, -10px);
 
         .works__img img {
             animation: imgScroll 10s linear alternate infinite;

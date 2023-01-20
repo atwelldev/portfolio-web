@@ -56,6 +56,8 @@ firstButton.addEventListener("click", function () {
     back.classList.toggle("_active");
     document.documentElement.style.overflow = "hidden";
     mobileMenu.style.display = "none";
+    // anim disable
+    firstButton.classList.add("_disable");
 });
 popupCross.forEach(function (el) {
     el.addEventListener("click", function () {
@@ -78,6 +80,8 @@ Observer.observe(document.querySelector("#firstInter"));
 Observer.observe(document.querySelector("#section-rates__list"));
 Observer.observe(document.querySelector("#footer"));
 Observer.observe(document.querySelector("#tec"));
+Observer.observe(document.querySelector("#works"));
+Observer.observe(document.querySelector("#worksMob"));
 // works card
 // Первая строка
 var cardsFirst = document.querySelectorAll(".works__container_1 .works__card");
@@ -118,5 +122,13 @@ refs.forEach(function (el, ind) {
         else
             window.scrollBy(0, 450);
         el.classList.add("_disable");
+    });
+});
+// tec
+var tecs = document.querySelectorAll(".section-tec__list div");
+var anim = document.querySelector(".section-tec__el_2");
+tecs.forEach(function (el, ind) {
+    el.addEventListener("mouseover", function () {
+        anim.classList.add("_disable");
     });
 });

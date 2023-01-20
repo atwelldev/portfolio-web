@@ -1,5 +1,8 @@
-@import url(./keyframes.scss);
 @media (max-width: 1100px) {
+  .works {
+    display: none; }
+  .works-mob {
+    display: block; }
   .about-popup {
     width: 100%;
     height: 100%;
@@ -28,7 +31,14 @@
   .about-popup__el_paragraph {
     margin-bottom: 50px; }
   .about-popup__el_button {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .about-popup__el_button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .about-popup__el_button button {
+      height: 50px;
+      width: 180px; } }
 
 @media (max-width: 767px) {
   .first__contacts {
@@ -72,13 +82,6 @@
     font-size: 1.4rem; }
   .about-popup__mess {
     font-size: 1.4rem; }
-  .about-popup__el_button {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center; }
-    .about-popup__el_button button {
-      height: 50px;
-      width: 180px; }
   .first__container {
     justify-content: center;
     padding-left: 60px; }
@@ -139,6 +142,26 @@
   .works__card {
     width: 300px; } }
 
-@media (orientation: landscape) {
-  body._mobile {
-    display: none; } }
+@media (orientation: landscape) and (max-height: 400px) {
+  .about-popup__white {
+    height: 200%; }
+  .about-popup__black {
+    height: 200%; }
+  .first {
+    height: 110vh; }
+  .section-rates {
+    height: 200vh; }
+  .section-tec {
+    height: 200vh; }
+  .works {
+    height: 200vh; } }
+
+@media (orientation: landscape) and (max-height: 300px) {
+  .first {
+    height: 180vh; }
+  .section-rates {
+    height: 250vh; }
+  .section-tec {
+    height: 250vh; }
+  .works {
+    height: 250vh; } }

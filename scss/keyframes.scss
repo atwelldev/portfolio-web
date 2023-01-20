@@ -52,22 +52,22 @@
 
 @keyframes worksConveer {
     from {
-        
+        opacity: 0;
         transform: translate(-100%, 0);
     }
     to {
-     
-        transform: translate(100%, 0);
+        opacity: 1;
+        transform: translate(0, 0);
     }
 }
 @keyframes worksConveerRev {
     from {
-        
+        opacity: 0;
         transform: translate(100%, 0);
     }
     to {
-     
-        transform: translate(-100%, 0);
+        opacity: 1;
+        transform: translate(0, 0);
     }
 }
 
@@ -183,6 +183,7 @@
     }
 }
 
+// first
 @keyframes firstLettersUp {
     from {
         transform: translate(0, 3px);
@@ -216,5 +217,53 @@
     }
     to {
         transform: translate(0, 1px);
+    }
+} 
+
+@keyframes buttonHover {
+    from {
+        transform: translate(0, -5px);
+    } 
+    to {
+        transform: translate(0, 5px);
+    }
+}
+// tec
+@keyframes tryHover {
+    from {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+    }
+    to {
+        width: 120px;
+        height: 120px;
+        opacity: 0;
+    }
+}
+
+// commet
+@keyframes commet {
+    0%{ 
+        // opacity: 0;
+        top: -200px;
+        left: -200px;
+        transform: rotate(-90deg) scale(0, 0);
+    }
+    
+    10% {
+        opacity: 1;
+        top: 160%;
+        left: 160%;
+        // opacity: 1;
+        transform: rotate(-90deg) scale(15, 15);
+
+    }
+    100% {
+        opacity: 1;
+        top: 160%;
+        left: 160%;
+        // opacity: 1;
+        transform: rotate(-90deg) scale(15, 15);
     }
 } 

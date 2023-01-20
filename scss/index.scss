@@ -206,6 +206,20 @@ body._scrollDisable {
         animation: backUp linear 70s infinite alternate-reverse;
     }
 }
+.first__commet {
+    display: none;
+    position: absolute;
+    // opacity: 0;
+    top: -100px;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    animation: commet infinite 30s ease 5s;
+    
+    left: -999;
+    transform: rotate(-90deg) scale(4, 4);
+    background: url(../img/svg/commet.svg) center;
+}
 .first__text {
     z-index: 1;
 }
@@ -272,7 +286,13 @@ body._scrollDisable {
         border-radius: $buttonRadius;
         animation: buttonAttention ease 1.5s infinite;
     }
-    
+    animation: buttonHover ease 2s alternate infinite;
+}
+.first__button._disable {
+    &::after {
+        display: none;
+        opacity: 0;
+    }
 }
 .first__contacts {
     // margin-right: 1000px;
@@ -499,19 +519,19 @@ body._scrollDisable {
     }
 
     &:nth-child(1) {
-        color: rgb(255, 238, 0);
+        color: rgb(255, 255, 105);
     }
     &:nth-child(2) {
-        color: cyan;
+        color: rgb(115, 255, 255);
     }
     &:nth-child(3) {
-        color: blue;
+        color: lightblue;
     }
     &:nth-child(4) {
-        color: red;
+        color: rgb(255, 93, 93);
     }
     &:nth-child(5) {
-        color: lightblue;
+        color: rgb(90, 214, 255);
     }
 
 }
@@ -757,6 +777,13 @@ body._scrollDisable {
     height: 100vh;
 }
 
+.works-mob {
+    display: none;
+}
+.works-mob .works__container {
+    height: 25%;
+}
+
 
 .works__container {
     display: flex;
@@ -764,15 +791,50 @@ body._scrollDisable {
     align-items: center;
     position: relative;
     height: 50%;
+    transition: $conveerSpeed ease;
 }
 
 .works__container_1 {
-    animation: worksConveer $conveerSpeed linear alternate infinite;
+    opacity: 0;
+    transform: translate(-100%, 0);
 
 }
 .works__container_2 {
-    animation: worksConveerRev $conveerSpeed linear alternate infinite;
+    opacity: 0;
+    transform: translate(100%, 0);
+    
 }
+.works__container_3 {
+    opacity: 0;
+    transform: translate(-100%, 0);
+
+}
+.works__container_4 {
+    opacity: 0;
+    transform: translate(100%, 0);
+    
+}
+
+.works._intersection .works__container_1 {
+    opacity: 1;
+    transform: translate(0, 0);
+
+}
+.works._intersection .works__container_2 {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.works._intersection .works__container_3 {
+    opacity: 1;
+    transform: translate(0, 0);
+
+}
+.works._intersection .works__container_4 {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
 
 .works__container_1._disable {
     animation-play-state: paused;
@@ -782,7 +844,9 @@ body._scrollDisable {
 }
 
 .works__card {
-    flex-shrink: 0;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 350px;
     border-radius: 20px;
     // transform: translate(0, -20px);
     height: 100%;
@@ -831,7 +895,9 @@ body._scrollDisable {
     }
 
 }
-
+.works-mob .works__links {
+    font-size: 2.4rem;
+}
 .works__links {
     position: absolute;
     bottom: 0px;
@@ -1038,33 +1104,130 @@ body._scrollDisable {
         }
         // 1
         &:nth-child(1)::after {
-            content: "JS";
+            content: "JS | TS";
         }
         &:nth-child(1):hover {
-            color: yellow;
+            color: rgb(255, 255, 105);
         }
         
 
         // 2
         &:nth-child(2)::after {
-            content: "Node.js";
+            content: "React";
         }
         &:nth-child(2):hover {
-            color: forestgreen;
+            color: rgb(115, 255, 255);
         }
 
         // 3
         &:nth-child(3)::after {
-            content: "Express";
+            content: "Node";
+        }
+        &:nth-child(3):hover {
+            color: rgb(72, 255, 72);
         }
 
-        // 
+        // 4
         &:nth-child(4)::after {
-            content: "React";
+            content: "Express";
+        }
+        &:nth-child(4):hover {
+            color: rgb(94, 94, 94);
+        }
+
+        // 5
+        &:nth-child(5)::after {
+            content: "HTML";
+        }
+        &:nth-child(5):hover {
+            color: rgb(255, 85, 0);
+        }
+
+        // 5
+        &:nth-child(6)::after {
+            content: "CSS";
+        }
+        &:nth-child(6):hover {
+            color: rgb(82, 82, 202);
         }
     }
     
+}
 
+
+.section-tec__el_2 {
+    // 2.1
+    div {
+        &:nth-child(1)::after {
+            content: "PHP";
+        }
+        &:nth-child(1):hover {
+            color: lightblue;
+        }
+        
+        // 2.2
+        // anim
+        &:nth-child(2) {
+            position: relative;
+        }
+        &:nth-child(2)::before {
+            content: "";
+            border: white solid 2px;
+            border-radius: 50%;
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+
+            animation: tryHover ease 1.5s infinite;
+        }
+        &:nth-child(2)::after {
+            content: "Laravel";
+        }
+        &:nth-child(2):hover {
+            color: rgb(255, 93, 93);
+        }
+
+        // 2.3
+        &:nth-child(3)::after {
+            content: "WP";
+        }
+        &:nth-child(3):hover {
+            color: rgb(90, 214, 255);
+        }
+
+        // 2.4
+        &:nth-child(4)::after {
+            content: "Python";
+        }
+        &:nth-child(4):hover {
+            color: lightgreen;
+        }
+
+        // 2.5
+        &:nth-child(5)::after {
+            content: "Docker";
+        }
+        &:nth-child(5):hover {
+            color: rgb(64, 64, 255);
+        }
+
+        // 2.6
+        &:nth-child(6)::after {
+            content: "Linux ";
+        }
+        &:nth-child(6):hover {
+            color: white;
+        }
+    }
+}
+.section-tec__el_2._disable {
+    div:nth-child(2)::before {
+        display: none;
+        animation: none;
+    }
 }
 
 // scroll bar (for google and other)

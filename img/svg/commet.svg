@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_00000173875183954362665030000000841821503278876302_);}
+</style>
+<g>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1714.083" y1="39.4658" x2="1741.6572" y2="39.4658" gradientTransform="matrix(0.7071 -0.7071 0.7071 0.7071 -606.7155 1620.1989)">
+		<stop  offset="0" style="stop-color:#CCE0F4"/>
+		<stop  offset="6.217392e-02" style="stop-color:#C3E1F5"/>
+		<stop  offset="0.1656" style="stop-color:#A9E4F6"/>
+		<stop  offset="0.2976" style="stop-color:#80E9F9"/>
+		<stop  offset="0.4512" style="stop-color:#47EFFC"/>
+		<stop  offset="0.5719" style="stop-color:#15F5FF"/>
+		<stop  offset="0.8652" style="stop-color:#00ACBF"/>
+		<stop  offset="0.9944" style="stop-color:#006B7F"/>
+	</linearGradient>
+	<circle class="st0" cx="643" cy="426.3" r="13.8"/>
+	
+		<linearGradient id="SVGID_00000181069524695175541160000003636816447259018939_" gradientUnits="userSpaceOnUse" x1="1722.3521" y1="-241.9393" x2="1860.0414" y2="-241.9393" gradientTransform="matrix(0.7071 -0.7071 0.5956 0.5956 -434.7102 1792.2042)">
+		<stop  offset="0" style="stop-color:#CCE0F4"/>
+		<stop  offset="6.217392e-02" style="stop-color:#C3E1F5"/>
+		<stop  offset="0.1656" style="stop-color:#A9E4F6"/>
+		<stop  offset="0.2976" style="stop-color:#80E9F9"/>
+		<stop  offset="0.4512" style="stop-color:#47EFFC"/>
+		<stop  offset="0.5719" style="stop-color:#15F5FF"/>
+		<stop  offset="0.8652" style="stop-color:#00ACBF"/>
+		<stop  offset="0.9944" style="stop-color:#006B7F"/>
+	</linearGradient>
+	<path style="fill:url(#SVGID_00000181069524695175541160000003636816447259018939_);" d="M734.6,331.1c4.5,4.5-72.2,92.2-77.6,97.6
+		s-13.4,6.1-18,1.5s-3.8-12.6,1.5-18C646,406.9,730.1,326.5,734.6,331.1z"/>
+</g>
+</svg>

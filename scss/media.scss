@@ -1,4 +1,4 @@
-@import url(./keyframes.scss);
+// @import url(./keyframes.scss);
 
 @media (max-width: 1520px) {
 
@@ -13,6 +13,19 @@
 }
 
 @media (max-width: 1100px) {
+
+    // works
+        
+            
+    .works {
+        display: none;
+    }
+
+
+    .works-mob {
+        display: block;
+    }
+
     // popup
     .about-popup {
         width: 100%;
@@ -65,8 +78,14 @@
         margin-bottom: 30px;
 
     }
-    .about-popup__button {
-        // width: 100%;
+    .about-popup__el_button {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        button {
+            height: 50px;
+            width: 180px;
+        }
     }
 }
 
@@ -154,15 +173,7 @@
         font-size: 1.4rem;
     }
 
-    .about-popup__el_button {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        button {
-            height: 50px;
-            width: 180px;
-        }
-    }
+
     // first
     .first__container {
         justify-content: center;
@@ -287,9 +298,57 @@
     }
 }
 
-@media (orientation: landscape) {
-    body._mobile {
-      display: none;
+// del
+@media (orientation: landscape) and (max-height: 400px) {
+    // popup
+    .about-popup__white {
+        height: 200%;
     }
-   
-  }
+    .about-popup__black {
+        height: 200%;
+    }
+        // first
+        .first {
+            height: 110vh;
+        }
+    
+    // rates
+    .section-rates {
+        height: 200vh;
+    }
+
+    // tec
+    .section-tec {
+        height: 200vh;
+    } 
+
+    // works
+    .works {
+        // display: block;
+        height: 200vh;
+    }
+
+}
+
+@media (orientation: landscape) and (max-height: 300px) {
+    // first
+    .first {
+        height: 180vh;
+    }
+    // rates
+    .section-rates {
+        height: 250vh;
+    }
+
+    // tec
+    .section-tec {
+        height: 250vh;
+    } 
+
+    // works
+    .works {
+        // display: block;
+        height: 250vh;
+    }
+
+}

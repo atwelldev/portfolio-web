@@ -65,6 +65,9 @@ firstButton.addEventListener("click", () => {
     back.classList.toggle("_active");
     document.documentElement.style.overflow = "hidden";
     mobileMenu.style.display = "none";
+
+    // anim disable
+    firstButton.classList.add("_disable");
 });
 popupCross.forEach(el => {
     el.addEventListener("click", () => {
@@ -92,6 +95,8 @@ Observer.observe(document.querySelector("#firstInter"));
 Observer.observe(document.querySelector("#section-rates__list"));
 Observer.observe(document.querySelector("#footer"));
 Observer.observe(document.querySelector("#tec"));
+Observer.observe(document.querySelector("#works"));
+Observer.observe(document.querySelector("#worksMob"));
 
 // works card
 // Первая строка
@@ -141,3 +146,12 @@ refs.forEach((el, ind) => {
         
     })
 });
+
+// tec
+const tecs = document.querySelectorAll(".section-tec__list div");
+const anim = document.querySelector(".section-tec__el_2")
+tecs.forEach((el, ind) => {
+    el.addEventListener("mouseover", () => {
+        anim.classList.add("_disable");
+    })
+})

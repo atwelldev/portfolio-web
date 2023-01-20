@@ -254,6 +254,18 @@ body._scrollDisable {
   .first__paral_bot {
     animation: backUp linear 70s infinite alternate-reverse; }
 
+.first__commet {
+  display: none;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  animation: commet infinite 30s ease 5s;
+  left: -999;
+  transform: rotate(-90deg) scale(4, 4);
+  background: url(../img/svg/commet.svg) center; }
+
 .first__text {
   z-index: 1; }
 
@@ -295,7 +307,8 @@ body._scrollDisable {
 .first__button {
   margin-top: 40px;
   animation: appear ease 1.5s;
-  position: relative; }
+  position: relative;
+  animation: buttonHover ease 2s alternate infinite; }
   .first__button::after {
     content: "";
     position: absolute;
@@ -306,6 +319,10 @@ body._scrollDisable {
     border: 2px solid rgba(0, 255, 255, 0.5);
     border-radius: 10px;
     animation: buttonAttention ease 1.5s infinite; }
+
+.first__button._disable::after {
+  display: none;
+  opacity: 0; }
 
 .first__contacts {
   z-index: 20; }
@@ -475,19 +492,19 @@ body._scrollDisable {
   color: #1c1d25; }
 
 .about-popup__el_tec div:hover:nth-child(1) {
-  color: #ffee00; }
+  color: #ffff69; }
 
 .about-popup__el_tec div:hover:nth-child(2) {
-  color: cyan; }
+  color: #73ffff; }
 
 .about-popup__el_tec div:hover:nth-child(3) {
-  color: blue; }
+  color: lightblue; }
 
 .about-popup__el_tec div:hover:nth-child(4) {
-  color: red; }
+  color: #ff5d5d; }
 
 .about-popup__el_tec div:hover:nth-child(5) {
-  color: lightblue; }
+  color: #5ad6ff; }
 
 .about-popup__black {
   border-radius: 0 10px 10px 0;
@@ -653,18 +670,51 @@ body._scrollDisable {
   z-index: 988;
   height: 100vh; }
 
+.works-mob {
+  display: none; }
+
+.works-mob .works__container {
+  height: 25%; }
+
 .works__container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  height: 50%; }
+  height: 50%;
+  transition: 2s ease; }
 
 .works__container_1 {
-  animation: worksConveer 25s linear alternate infinite; }
+  opacity: 0;
+  transform: translate(-100%, 0); }
 
 .works__container_2 {
-  animation: worksConveerRev 25s linear alternate infinite; }
+  opacity: 0;
+  transform: translate(100%, 0); }
+
+.works__container_3 {
+  opacity: 0;
+  transform: translate(-100%, 0); }
+
+.works__container_4 {
+  opacity: 0;
+  transform: translate(100%, 0); }
+
+.works._intersection .works__container_1 {
+  opacity: 1;
+  transform: translate(0, 0); }
+
+.works._intersection .works__container_2 {
+  opacity: 1;
+  transform: translate(0, 0); }
+
+.works._intersection .works__container_3 {
+  opacity: 1;
+  transform: translate(0, 0); }
+
+.works._intersection .works__container_4 {
+  opacity: 1;
+  transform: translate(0, 0); }
 
 .works__container_1._disable {
   animation-play-state: paused; }
@@ -673,7 +723,9 @@ body._scrollDisable {
   animation-play-state: paused; }
 
 .works__card {
-  flex-shrink: 0;
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 350px;
   border-radius: 20px;
   height: 100%;
   width: 350px;
@@ -702,6 +754,9 @@ body._scrollDisable {
     background-color: rgba(0, 0, 0, 0.3);
     opacity: 0;
     transition: ease 0.3s; }
+
+.works-mob .works__links {
+  font-size: 2.4rem; }
 
 .works__links {
   position: absolute;
@@ -861,17 +916,84 @@ body._scrollDisable {
       transform: translate(0, 0);
       opacity: 1; }
     .section-tec__el div:nth-child(1)::after {
-      content: "JS"; }
+      content: "JS | TS"; }
     .section-tec__el div:nth-child(1):hover {
-      color: yellow; }
+      color: #ffff69; }
     .section-tec__el div:nth-child(2)::after {
-      content: "Node.js"; }
-    .section-tec__el div:nth-child(2):hover {
-      color: forestgreen; }
-    .section-tec__el div:nth-child(3)::after {
-      content: "Express"; }
-    .section-tec__el div:nth-child(4)::after {
       content: "React"; }
+    .section-tec__el div:nth-child(2):hover {
+      color: #73ffff; }
+    .section-tec__el div:nth-child(3)::after {
+      content: "Node"; }
+    .section-tec__el div:nth-child(3):hover {
+      color: #48ff48; }
+    .section-tec__el div:nth-child(4)::after {
+      content: "Express"; }
+    .section-tec__el div:nth-child(4):hover {
+      color: #5e5e5e; }
+    .section-tec__el div:nth-child(5)::after {
+      content: "HTML"; }
+    .section-tec__el div:nth-child(5):hover {
+      color: #ff5500; }
+    .section-tec__el div:nth-child(6)::after {
+      content: "CSS"; }
+    .section-tec__el div:nth-child(6):hover {
+      color: #5252ca; }
+
+.section-tec__el_2 div:nth-child(1)::after {
+  content: "PHP"; }
+
+.section-tec__el_2 div:nth-child(1):hover {
+  color: lightblue; }
+
+.section-tec__el_2 div:nth-child(2) {
+  position: relative; }
+
+.section-tec__el_2 div:nth-child(2)::before {
+  content: "";
+  border: white solid 2px;
+  border-radius: 50%;
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  animation: tryHover ease 1.5s infinite; }
+
+.section-tec__el_2 div:nth-child(2)::after {
+  content: "Laravel"; }
+
+.section-tec__el_2 div:nth-child(2):hover {
+  color: #ff5d5d; }
+
+.section-tec__el_2 div:nth-child(3)::after {
+  content: "WP"; }
+
+.section-tec__el_2 div:nth-child(3):hover {
+  color: #5ad6ff; }
+
+.section-tec__el_2 div:nth-child(4)::after {
+  content: "Python"; }
+
+.section-tec__el_2 div:nth-child(4):hover {
+  color: lightgreen; }
+
+.section-tec__el_2 div:nth-child(5)::after {
+  content: "Docker"; }
+
+.section-tec__el_2 div:nth-child(5):hover {
+  color: #4040ff; }
+
+.section-tec__el_2 div:nth-child(6)::after {
+  content: "Linux "; }
+
+.section-tec__el_2 div:nth-child(6):hover {
+  color: white; }
+
+.section-tec__el_2._disable div:nth-child(2)::before {
+  display: none;
+  animation: none; }
 
 ::-webkit-scrollbar {
   width: 14px;

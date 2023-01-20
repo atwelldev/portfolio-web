@@ -16,48 +16,6 @@
     }
 }
 
-@keyframes popUp {
-    from {
-        //opacity: 0;
-        transform: translate(0, -200%);
-    }
-    to {
-        //opacity: 1;
-        transform: translate(0, 0);
-    }
-}
-@keyframes popUp_black {
-    from {
-        //opacity: 0;
-        transform: translate(0, 200%);
-    }
-    to {
-        //opacity: 1;
-        transform: translate(0, 0);
-    }
-}
-
-
-@keyframes contacts__popup_black_mobile {
-    from {
-        //opacity: 0;
-        transform: translate(-100%, 0);
-    }
-    to {
-        //opacity: 1;
-        transform: translate(0, 0);
-    }
-}
-@keyframes contacts__popup_white_mobile {
-    from {
-        //opacity: 0;
-        transform: translate(100%, 0);
-    }
-    to {
-        //opacity: 1;
-        transform: translate(0, 0);
-    }
-}
 
 // Back Mobile
 
@@ -73,7 +31,18 @@
 @keyframes appear {
     from {
         opacity: 0;
-        transform: translate(-30%, 0);
+        transform: translate(-10%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes appearRev {
+    from {
+        opacity: 0;
+        transform: translate(20%, 0);
     }
     to {
         opacity: 1;
@@ -88,7 +57,17 @@
     }
     to {
      
-        transform: translate(0, 0);
+        transform: translate(100%, 0);
+    }
+}
+@keyframes worksConveerRev {
+    from {
+        
+        transform: translate(100%, 0);
+    }
+    to {
+     
+        transform: translate(-100%, 0);
     }
 }
 
@@ -120,5 +99,64 @@
     }
     to {
         height: 0;
+    }
+}
+
+@keyframes arrow {
+    from {
+        transform: translate(0, -15px);
+    }
+    to {
+        transform: translate(0, 15px);
+    }
+}
+
+@keyframes burgerArrow {
+    from {
+        transform: translate(-30px, -60%);
+    }
+    to {
+        transform: translate(0px, -60%);
+    }
+}
+
+@keyframes title {
+    from {
+        transform: translate(-50%, 0);
+    }
+    to {
+        transform: translate(-50%, -10%);
+    }
+}
+
+// about-popup
+@keyframes back {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes whitePopup {
+    from {
+        // opacity: 0;
+        transform: translate(0, -200%);
+    }
+    to {
+        // opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes blackPopup {
+    from {
+        // opacity: 0;
+        transform: translate(0, 200%);
+    }
+    to {
+        // opacity: 1;
+        transform: translate(0, 0);
     }
 }

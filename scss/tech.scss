@@ -75,11 +75,7 @@ html {
     &::before {
 
     }
-    &:hover {
-        transform: scale(1.1, 1.1);
-        box-shadow: -5px -5px 0 rgba(0, 255, 255, 0.6), -10px -10px 0 rgba(0, 255, 255, 0.3)
-        
-    }
+
     &:hover::after {
         animation: none;
         
@@ -102,4 +98,11 @@ html {
     // &:hover::before {
     //     transform: translate(450px, 0) rotate(45deg); 
     // }
+}
+._desk .button {
+    &:hover {
+        transform: scale(1.1, 1.1);
+        box-shadow: -5px -5px 0 rgba(0, 255, 255, 0.6), -10px -10px 0 rgba(0, 255, 255, 0.3)
+        
+    }
 }

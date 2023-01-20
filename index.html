@@ -7,10 +7,13 @@
     <title>Denis Atwell</title>
 
     <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=League+Spartan:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Bitter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Cousine:regular,italic,700,700italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700,700italic" rel="stylesheet" />
+    <link rel="stylesheet" href="fonts/cinzel.ttf">
     <!-- Copyright -->
 
     <!-- Styles -->
@@ -94,90 +97,61 @@
                         </p>
                         <button class="first__button button">Обо мне</button>
                     </div>
-                    <!-- <div class="first__img">
-                        <img src="/img/svg/gd.svg" alt="">
-                    </div> -->
-                    <ul class="first__contacts">
-                        <li class="first__el">
-                            <a href="https://github.com/DWellG1t"><i class="fa-brands fa-github"></i></a>
-                        </li>
-                        <li class="first__el">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </li>
-                        <li class="first__el">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </li>
-                        <li class="first__el">
-                            <i class="fa-brands fa-instagram"></i>
-                        </li>
-                        <li class="first__el">
-                            <i class="fa-brands fa-google-plus-g"></i>                                    
-                        </li>
-                </ul>
                 </div>
-
-                <!-- Contact menu -->
-
             </section>
             
-            <!-- Contact PopUp -->
-            <div class="contact-popup__back"></div>
-            <div class="contact-popup">
-                <div class="contact-popup__white">
-                    <div class="contact-popup__text">
-                        <div class="contact-popup__cross contact-popup__cross_mobile">
-                            <span></span>
-                        </div>
-                        <h1 class="contact-popup__title title">About me</h1>
-                        <h2 class="contact-popup__subtitle title">Front-end developer</h2>
-                        <p class="contact-popup__paragraph paragraph">Lorem ipsum, dolor sit amet coor sit amet consectetur. I'm <span>Denis Atwell</span>, a 22-year-old Italian Freelance Front-end developer. I'm a weird guy who likes making weird things with web technologies.
-                            I like to resolve design problems, create smart user intereveloping rich web experiences & <span>webb applications</span>.
-                            When not working or futzing around with code, I study how to escape from University. Actually for hire.</p>
-                        <ul class="contact-popup__tech">
-                            <li class="contact-popup__el">
-                                <i class="fa-brands fa-react"></i>
-                            </li>
-                            <li class="contact-popup__el">
-                                <i class="fa-brands fa-node-js"></i>
-                            </li>
-                            <li class="contact-popup__el">
-                                <i class="fa-brands fa-codepen"></i>
-                            </li>
-                            <li class="contact-popup__el">
-                                <i class="fa-brands fa-figma"></i>
-                            </li>
-                            <li class="contact-popup__el">
-                                <i class="fa-brands fa-docker"></i>
-                            </li>
-                        </ul>    
-                        </div>
+            <!-- about-popup -->
+            <div class="back"></div>
+            <div class="about-popup">
+
+                <!-- white -->
+                <div class="about-popup__white">
+                    <ul class="about-popup__list">
+                        <li class="about-popup__el about-popup__el_title">Обо мне</li>
+                        <li class="about-popup__el about-popup__el_subtitle">веб-разработчки</li>
+                        <li class="about-popup__el about-popup__el_paragraph">Lorem <span>lorem</span> lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ea officia mollitia dolorem nihil fugiat non quaerat, quasi porro voluptatem! ipsum dolor, sit amet consectetur adipisicing elit. Expedita, laborum impedit. Perferendis tempore tempora ut repellat ab eveniet aspernatur maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptas alias! Non distinctio quidem sit repellat est illum repellendus in.</li>
+                        <li class="about-popup__el about-popup__el_tec">
+                            <div><i class="fa-brands fa-square-js"></i></div>
+                            <div><i class="fa-brands fa-react"></i></div>
+                            <div><i class="fa-brands fa-php"></i></div>
+                            <div><i class="fa-brands fa-laravel"></i></div>
+                            <div><i class="fa-brands fa-wordpress"></i></div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="contact-popup__black">
-                    <div class="contact-popup__cross contact-popup__cross_desk">
-                        <span></span>
-                    </div>
-                    <div class="popup-black__black_container">
-                        <h1 class="contact-popup__title-black title">Contact me</h1>
-                        <h2 class="contact-popup__subtitle-black title">Freelance, job</h2>
-                        <form action="handler.php" method="post" class="contact-popup__form">
-                            <p>Name *</p>
-                            <input type="text" name="name">
-                            <p>E-mail *</p>
-                            <input type="text" name="email">
-                            <p>Message *</p>
-                            <textarea name="message" id="" cols="30" rows="10"></textarea>
-                            <br>
-                            <button class="button" type="submit">Send message</button>
-                        </form>
-                    </div>
+
+                <!-- black -->
+                <div class="about-popup__black">
+                <!-- cross -->
+                <div class="about-popup__cross"></div>
+
+                    <ul class="about-popup__list">
+                        <li class="about-popup__el about-popup__el_title">Связаться</li>
+                        <li class="about-popup__el about-popup__el_subtitle">работа, фриланс</li>
+                        <li class="about-popup__el about-popup__el_form">
+                            <form action="" class="about-popup__form">
+                                <p class="about-popup__name">Имя *</p>
+                                <input type="text">
+                                <p class="about-popup__email">E-mail *</p>
+                                <input type="email">
+                                <p class="about-popup__mess">Сообщение *</p>
+                                <textarea name="" id="" cols="30" rows="4"></textarea>
+                            </form>
+                        </li>
+                        <li class="about-popup__el about-popup__el_button">
+                            <button class="about-popup__button button">
+                                Отправить
+                            </button>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
             <!-- section rates -->
             <section class="section-rates">
-                <div class="section-rates__ref">Услуги</div>
+                <div class="section-rates__ref _ref">Услуги <span>↓</span></div>
                 <div class="section-rates__container _container">
-                    <ul class="section-rates__list">
+                    <ul class="section-rates__list" id="section-rates__list">
                         <!-- el 1 -->
                         <li class="section-rates__el">
                             <div class="section-rates__titlebox">
@@ -272,79 +246,241 @@
 
             <!-- Works -->
             <section class="works">
-                <div class="works__container" id="worksInter">
+                <div class="section-rates__ref _ref">Работы<span>↓</span></div>
+                <div class="works__container works__container_1" id="worksInter">
                         
                     <div class="works__card">
                         <div class="works__img">
                             <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
                         </div>
+                        <div class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </div>
+                    </div>
+
+                                            
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/gmdatwop.beget.tech_.png" alt=""> 
+                        </div>
+                        <ul class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </ul>
+                    </div>
+
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
+                        </div>
+                        <div class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </div>
+                    </div>
+
+                                            
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/gmdatwop.beget.tech_.png" alt=""> 
+                        </div>
+                        <ul class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </ul>
+                    </div>
+
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
+                        </div>
+                        <div class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </div>
+                    </div>
+
+                                            
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/gmdatwop.beget.tech_.png" alt=""> 
+                        </div>
+                        <ul class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </ul>
+                    </div>
+
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
+                        </div>
+                        <div class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </div>
+                    </div>
+
+                                            
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/gmdatwop.beget.tech_.png" alt=""> 
+                        </div>
+                        <ul class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+                <div class="works__container works__container_2" id="worksInter">
+                        
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
+                        </div>
+                        <div class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </div>
+                    </div>
+
+                                            
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/gmdatwop.beget.tech_.png" alt=""> 
+                        </div>
+                        <ul class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </ul>
                     </div>
 
                     <div class="works__card">
                         <div class="works__img">
                             <img src="./img/jpeg/gmdatwop.beget.tech_.png" alt=""> 
                         </div>
-                    </div>
-                    
-                    <div class="works__card">
-                        <div class="works__img">
-                            <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
+                        <div class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
                         </div>
                     </div>
 
+                                            
                     <div class="works__card">
                         <div class="works__img">
                             <img src="./img/jpeg/gmdatwop.beget.tech_.png" alt=""> 
                         </div>
+                        <ul class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </ul>
                     </div>
 
                     <div class="works__card">
                         <div class="works__img">
                             <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
                         </div>
+                        <div class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </div>
+                    </div>
+
+                                            
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/gmdatwop.beget.tech_.png" alt=""> 
+                        </div>
+                        <ul class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </ul>
                     </div>
 
                     <div class="works__card">
                         <div class="works__img">
                             <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
                         </div>
-                    </div>
-
-                    <div class="works__card">
-                        <div class="works__img">
-                            <img src="./img/jpeg/www.branchfurniture.com_.png" alt=""> 
+                        <div class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
                         </div>
                     </div>
 
-     
+                                            
+                    <div class="works__card">
+                        <div class="works__img">
+                            <img src="./img/jpeg/gmdatwop.beget.tech_.png" alt=""> 
+                        </div>
+                        <ul class="works__links">
+                            <div><a href=""><i class="fa-solid fa-link"></i></a></div>
+                            <div><a href=""><i class="fa-brands fa-github"></i></a></div>
+                        </ul>
+                    </div>
+
 
                 </div>
 
             </section>
             
+            <section class="section-tec">
+                <div class="section-tec__ref _ref">Информация<span>↓</span></div>
+                <div class="section-tec__container _container">
+                    <ul class="section-tec__list" id="tec">
+                        <li class="section-tec__list_title">Технологии и фрэймворки</li>
+                        <li class="section-tec__el section-tec__el_1">
+                            <div><i class="fa-brands fa-square-js"></i></div>
+                            <div><i class="fa-brands fa-node-js"></i></div>
+                            <div><i class="fa-brands fa-react"></i></div>
+                            <div><i class="fa-brands fa-php"></i></div>
+                            <div><i class="fa-brands fa-square-js"></i></div>
+                            <div><i class="fa-brands fa-html5"></i></div>
+                        </li>
+                            <li class="section-tec__el section-tec__el_2">
+                            <div><i class="fa-brands fa-square-js"></i></div>
+                            <div><i class="fa-brands fa-node-js"></i></div>
+                            <div><i class="fa-brands fa-react"></i></div>
+                            <div><i class="fa-brands fa-php"></i></div>
+                            <div><i class="fa-brands fa-square-js"></i></div>
+                            <div><i class="fa-brands fa-html5"></i></div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
         </main>
 
         <footer class="footer">
+            
             <div class="footer__container _container">
-                <div class="footer__block">
-                    <a href="" class="footer__logo">DZ</a>
-                    <nav class="footer__menu">
-                        <ul class="footer__list">
-                            <li class="footer__el">
-                                <a href="" class="footer__link">Twitter</a>
-                            </li>
-                            <li class="footer__el">
-                                <a href="" class="footer__link">LinkedIn</a>
-                            </li>
-                            <li class="footer__el">
-                                <a href="" class="footer__link">GitHub</a>
-                            </li>
-                            <li class="footer__el">
-                                <a href="" class="footer__link">CodeWars</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <p class="footer__copyright paragraph">© Denis atwell - Moscow, 141411 - gm.dat.well@gmail.com</p>
+                <div class="footer__block" id="footer">
+                    <ul class="footer__list">
+
+                        <li class="footer__el_logo">
+                            <a href="" class="footer__logo"><i class="fa-brands fa-slack"></i></a>
+                        </li>
+                        <li class="footer__el_ip">
+                            ИП Жукавин Денис Васильевич
+                        </li>
+                        <li class="footer__el_tel">
+                            <a href="tel:+79775918292">+7 (977) 591-82-92</a>
+                        </li>
+                        <li class="footer__el_email">
+                            <a href="mailto:gm.dat.well@gmail.com">gm.dat.well@gmail.com</a>
+                        </li>
+                        <li class="footer__el_links">
+                            <div class=""><i class="fa-brands fa-github"></i></div>
+                            <div class=""><i class="fa-brands fa-linkedin"></i></div>
+                            <div class=""><i class="fa-brands fa-vk"></i></div>
+                        </li>
+                        <li class="footer__el_rights">
+                            © Все права защищены
+                        </li>
+                    </ul>
                 </div>
             </div>
 

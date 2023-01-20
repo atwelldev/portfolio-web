@@ -1,7 +1,5 @@
 @media (max-width: 1520px) {
-    .works__container {
-        flex-direction: column;
-    }
+
 }
 
 @media (min-width: 1200px) {
@@ -12,85 +10,8 @@
 
 }
 
-@media (max-width: 991px) {
-    // First contact popup
-    .contact-popup {
-        flex-direction: column;
-        align-items: center;
-        overflow: scroll;
-        height: 100%;
-    }
+@media (max-width: 1100px) {
 
-    // .contact-popup__cross {
-    //     top: 50px;
-    //     right: 350px;
-
-    //     &::before, &::after {
-    //         content: "";
-    //         background-color: black;
-    //     }
-    // }
-    
-    // white
-    .contact-popup__white {
-        padding: 20px 370px;
-        height: 100%;
-        width: 100%;
-        animation: ease 1s contacts__popup_black_mobile;
-    }
-
-    .contact-popup__text {
-        position: relative;
-        margin-bottom: 20px;
-    }
-    .contact-popup__cross_desk {
-        display: none;
-    }
-    .contact-popup__cross_mobile {
-        &::before, &::after {
-            background-color: black;
-        }
-        position: absolute;
-        display: block;
-        top: 0px;
-        right: 0px;
-    }
-
-    .contact-popup__title {
-
-     
-    }
-    .contact-popup__subtitle {
-        margin-bottom: 0;
-    }
-
-        // Black
-        .contact-popup__black {
-            height: 100%;
-            width: 100%;
-            animation: ease 1s contacts__popup_white_mobile;
-            
-    
-        }
-    .popup-black__black_container {
-        width: 320px;
-    }
-
-
-    .contact-popup__form {
-        font-size: 1.8rem;
-        width: 100%;
-        & input {
-            width: 100%;
-        }
-        & textarea {
-            width: 100%;
-
-        }
-        & button {
-            width: 100%;
-        }
-    }
 
 }
 
@@ -98,36 +19,147 @@
     .first__contacts {
         display: none;
     }
-    .works__container {
-        flex-direction: column;
-    }
-    .card__pair {
-        flex-direction: column;
-    }
-    // footer
-    .footer__el {
-        &:not(:last-child) {
-            margin-right: 10px;
-        }
-        
-        
-    }
-    .footer__link {
-        font-size: 2.1rem;
-    }
 
-
-    // First
+    // first
     .first__container {
         justify-content: center;
-        padding: 20px;
+        padding-left: 60px !important;
     }
 
+    // .title {
+    //     font-size: 6.8rem;
+    // }
+
+    // footer
+
+    // First
+
+    // Tec
+    .section-tec__el {
+        div {
+            font-size: 5.4rem;
+
+            &::after {
+                font-size: 1.4rem;
+            }
+        }
+    }
 }
 
 @media (max-width: 575px) {
+    // first
     .first__container {
         justify-content: center;
         padding-left: 60px;
+    }
+
+    // footer
+    .footer__el_logo {
+        font-size: 5.4rem !important;
+        
+    }
+    .footer__el_ip {
+        font-size: 2.7rem !important;
+    }
+
+    // rates
+    .section-rates__title {
+        font-size: 2.1rem !important;
+
+    }
+
+    .section-rates__cross {
+        width: 20px;
+        height: 20px;
+
+    }
+}
+
+@media (max-width: 400px) {
+    // first
+    .first__title {
+        font-size: 4.7rem;
+        line-height: 50px;
+    }
+    .first__paragraph {
+        font-size: 2.1rem;
+    }
+
+    .first__button {
+        height: 50px;
+        width: 160px;
+        font-size: 1.8rem;
+    }
+
+
+    .footer__el_logo {
+        font-size: 4.2rem !important;
+        
+    }
+    .footer__el_ip {
+        font-size: 1.8rem !important;
+    }
+
+    .footer__el_tel {
+        font-size: 1.6rem !important;
+    }
+
+    .footer__el_email {
+        font-size: 1.6rem !important;
+    }
+
+    .footer__el_links {
+        font-size: 2.4rem !important;
+
+    }
+
+    // popup
+    .contact-popup__el {
+        font-size: 4.2rem;
+    }
+
+    .contact-popup__paragraph {
+        font-size: 1.5rem;
+    }
+
+    // tec
+    .section-tec__list_title {
+        font-size: 2.4rem;
+    }
+    .section-tec__el {
+        div {
+            font-size: 4.2rem;
+
+            &::after {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 300px) {
+    .first__container {
+        padding-left: 30px !important;
+    }
+
+    // .title {
+    //     font-size: 5.4rem;
+    // }
+    // tec
+    .section-tec__list_title {
+        font-size: 2.1rem;
+    }
+    .section-tec__el {
+        div {
+            font-size: 3.2rem;
+
+            &::after {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    // card 
+    .works__card {
+        width: 300px;
     }
 }

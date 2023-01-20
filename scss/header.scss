@@ -51,11 +51,7 @@
         margin-right: 50px;
     }
     transition: $hoverTrans;
-    &:hover {
-        color: white;
-        transform: scale(1.1, 1.1);
-        
-    }
+
     
     & a {
         font-size: 2.1rem;
@@ -75,6 +71,13 @@
         
         font-size: 1.8rem;
         font-weight: 500;
+    }
+}
+._desk .header__el {
+    &:hover {
+        color: white;
+        transform: scale(1.1, 1.1);
+        
     }
 }
 

@@ -35,113 +35,45 @@ if (isMobile.any()) {
 // mobile menu
 const mobileMenu: any = document.querySelector(".mobile-menu");
 const burger: any = document.querySelector(".mobile-menu__burger");
+const burgerArrow: any = document.querySelector(".mobile-menu__burger_container");
+
 burger.addEventListener("click", () => {
 
     mobileMenu.classList.toggle("_active");
     burger.classList.toggle("_active");
+
+    burgerArrow.classList.add("_disable");
 });
 
-// Mouse move
-const paralTop: Element = document.querySelector(".first__paral_top");
-const paralBot: Element = document.querySelector(".first__paral_bot");
-
-// let pageX: number = 0;
-// let pageY: number = 0;
-
-
-// let impulseX: number = 0;
-// let impulseY: number = 0;
-// let direX = 0;
-
-// let lastX = 0;
-
-// paralTop.style.top= "0px";
-// paralTop.style.left = "-1000px";
-
-// document.addEventListener("mousemove", event => {
-    
-//     // impulseX = Math.abs(event.movementX * 5); 
-//     // direX = event.movementX != 0 ? event.movementX / Math.abs(event.movementX) : 0;
-
-//     // impulseY += 1;
-
-//     // pageX = event.pageX;
-//     // pageY = event.pageY;
-
-//     // paralTop.style.top = ` ${event.movementY / 10}px`;
-
-// })
-
-// // Проверка на окончание данного события
-// let moveChecking = setInterval(() => {
-    
-//     if(pageX !== 0 || pageY !== 0) {
-//         // console.log("двигается")
-        
-//         console.log(impulseX)
-//     } else {
-//         if(impulseX !== 0 || impulseY !== 0) {
-//             // console.log("imp" + impulseX)
-//             // console.log(direX)
-//             paralTop.style.left = Number.parseInt(paralTop.style.left) + direX + "px";
-            
-
-//             // console.log(impulseX)
-//             // уменьшаем импульс
-            
-//             if(impulseX != 0)
-//                 impulseX -= 1;
-
-//         }
-//         // console.log("стоит")
-//     }
-
-//     // Обнуляем значения
-//     pageX = 0;
-//     pageY = 0;
-// }, 1)
-
-// let inter = setInterval(() => {
-//     if(eventCheck) {
-        
-//         paralTop.style.transform = `translate(${1000 + 'px'}, ${500 + 'px'})`;
-//         eventCheck = false;
-//     }
-// }, 1)
+burger.addEventListener("mouseover", () => {
+    burgerArrow.classList.toggle("_hidden");
+});
+burger.addEventListener("mouseout", () => {
+    burgerArrow.classList.toggle("_hidden");
+})
 
 // Contact PopUp
-const contactPopup: any = document.querySelector(".contact-popup");
-const firstButton: any = document.querySelector(".first__button");
-const backPopup: any = document.querySelector(".contact-popup__back");
-const crossPopup: any = document.querySelectorAll(".contact-popup__cross");
-firstButton.addEventListener("click", () => { document.querySelector("body").classList.toggle("_scrollDisable");contactPopup.classList.toggle("contact-popup_active"); backPopup.classList.toggle("contact-popup__back_active");  })
-crossPopup.forEach( el => { el.addEventListener("click", () => {
-    contactPopup.classList.toggle("contact-popup_active"); 
-    backPopup.classList.toggle("contact-popup__back_active");
-    document.querySelector("body").classList.toggle("_scrollDisable"); 
-})})
-
-//  Contacts
-
-// lightTheme
-// const lightSwitch = document.querySelector(".header__el_switch");
-// lightSwitch.addEventListener("click", () => { document.querySelector("body").classList.toggle("_white");  })
+const firstButton = document.querySelector(".first__button");
+const popupCross = document.querySelector(".about-popup__cross");
+const popup = document.querySelector(".about-popup");
+const back = document.querySelector(".back");
 
 
-// Works__ref
-// document.querySelector(".works__ref").addEventListener("click", event => { window.scroll(0, window.innerHeight - 200);})
+firstButton.addEventListener("click", () => {
+    popup.classList.toggle("_active");
+    back.classList.toggle("_active");
+    document.documentElement.style.overflow = "hidden";
+    mobileMenu.style.display = "none";
+});
 
-// Works
-// const workCardButton = document.querySelector(".works__button");
-// workCardButton.addEventListener("click", () => { document.querySelector('.works-popup_1').classList.toggle("works-popup_1_active"); document.querySelector(".header").style.display = "none"; })
-// const workPopUpCross = document.querySelector(".works-popup__black_cross");
-// workPopUpCross.addEventListener("click", () => {  document.querySelectorAll(".works-popup").forEach((value, index) => { value.classList.remove("works-popup_1_active"); document.querySelector(".header").style.display = "block";}) } )
+popupCross.addEventListener("click", () => {
+    popup.classList.toggle("_active");
+    back.classList.toggle("_active");
+    document.documentElement.style.overflow = "auto";
+    mobileMenu.style.display = "block";
+});
 
-// const cards = document.querySelectorAll(".works__card");
-// cards[1].addEventListener("click", () => { window.location = "https://bolotny.com"; })
-// cards[1].addEventListener("click", () => { window.location = "https://bolotny.com"; })
-// cards[2].addEventListener("click", () => { window.location = "https://bolotny.com"; })
-// cards[3].addEventListener("click", () => { window.location = "https://bolotny.com"; })
+
 
 // Observer
 const Observer: IntersectionObserver = new IntersectionObserver((entires) => {
@@ -154,15 +86,29 @@ const Observer: IntersectionObserver = new IntersectionObserver((entires) => {
 
 Observer.observe(document.querySelector("#worksInter"));
 Observer.observe(document.querySelector("#firstInter"));
+Observer.observe(document.querySelector("#section-rates__list"));
+Observer.observe(document.querySelector("#footer"));
+Observer.observe(document.querySelector("#tec"));
 
 // works card
-const cards: any = document.querySelectorAll(".works__card");
-cards.forEach(el => {
+// Первая строка
+const cardsFirst: any = document.querySelectorAll(".works__container_1 .works__card");
+const cardsSecond: any = document.querySelectorAll(".works__container_2 .works__card");
+cardsFirst.forEach((el, indx) => {
     el.addEventListener("mouseover", () => {
-        document.querySelector('.works__container').classList.toggle('_disable')
+        document.querySelector(`.works__container_1`).classList.toggle('_disable')
     });
     el.addEventListener("mouseout", () => {
-        document.querySelector('.works__container').classList.toggle('_disable')
+        document.querySelector(`.works__container_1`).classList.toggle('_disable')
+    });
+})
+// Вторая строка
+cardsSecond.forEach((el, indx) => {
+    el.addEventListener("mouseover", () => {
+        document.querySelector(`.works__container_2`).classList.toggle('_disable')
+    });
+    el.addEventListener("mouseout", () => {
+        document.querySelector(`.works__container_2`).classList.toggle('_disable')
     });
 })
 
@@ -176,3 +122,19 @@ crossArr.forEach((el, ind) => {
         textArr[ind].classList.toggle("_active");
     });
 })
+
+// ref scroll
+const refs: any = document.querySelectorAll("._ref");
+
+refs.forEach((el, ind) => {
+    ind += 1;
+    el.addEventListener("click", () => {
+        if(ind != 3)
+            window.scrollTo(0, ind * innerHeight);
+        else
+            window.scrollBy(0, 450);
+
+        el.classList.add("_disable");
+        
+    })
+});

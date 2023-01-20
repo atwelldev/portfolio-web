@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 html {
-  font-family: Bitter, Helvetica, Arial, sans-serif;
+  font-family: "PT sans", Helvetica, Arial, sans-serif;
   color: white;
   scroll-behavior: smooth; }
 
@@ -98,11 +98,12 @@ html {
   border-radius: 10px;
   background: -webkit-linear-gradient(60deg, cyan, #6fffff, #b7ffff);
   background: linear-gradient(60deg, cyan, #8affff, #b7ffff); }
-  .button:hover {
-    transform: scale(1.1, 1.1);
-    box-shadow: -5px -5px 0 rgba(0, 255, 255, 0.6), -10px -10px 0 rgba(0, 255, 255, 0.3); }
   .button:hover::after {
     animation: none; }
+
+._desk .button:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: -5px -5px 0 rgba(0, 255, 255, 0.6), -10px -10px 0 rgba(0, 255, 255, 0.3); }
 
 .img {
   box-shadow: 0 0 20px black;

@@ -1,5 +1,6 @@
 // font
-$fontFamily: Bitter, Helvetica,Arial,sans-serif;
+$fontFamily: "PT sans", Helvetica,Arial,sans-serif;
+ 
 $techSize: 5.4rem; 
 
 // container
@@ -19,13 +20,14 @@ $subLight: white;
 $mainDarkText: black;
 $subDarkText: rgb(58, 58, 58);
 $mainLightText: White;
-$subLightText: #b0b2c3;
+$subLightText: #b8bad0;
 
-$subColor: aquamarine;
-$subGradient: aquamarine;
+$subColor: #6fffff;
 
 // transition
 $hoverTrans: 0.3s;
+$appear: 1s;
+$conveerSpeed: 25s;
 
 // Border
 $blockRadius: 10px;
@@ -35,3 +37,4 @@ $buttonRadius: 10px;
     background: -webkit-linear-gradient(171deg, #1c1d25,#0a0a0d);
     background: linear-gradient(171deg, #1c1d25,#0a0a0d);
 }
+

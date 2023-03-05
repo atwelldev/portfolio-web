@@ -132,20 +132,20 @@ crossArr.forEach((el, ind) => {
 })
 
 // ref scroll
-const refs: any = document.querySelectorAll("._ref");
+// const refs: any = document.querySelectorAll("._ref");
 
-refs.forEach((el, ind) => {
-    ind += 1;
-    el.addEventListener("click", () => {
-        if(ind != 3)
-            window.scrollTo(0, ind * innerHeight);
-        else
-            window.scrollBy(0, 450);
+// refs.forEach((el, ind) => {
+//     ind += 1;
+//     el.addEventListener("click", () => {
+//         if(ind != 3)
+//             window.scrollTo(0, ind * innerHeight);
+//         else
+//             window.scrollBy(0, 450);
 
-        el.classList.add("_disable");
+//         el.classList.add("_disable");
         
-    })
-});
+//     })
+// });
 
 // tec
 const tecs = document.querySelectorAll(".section-tec__list div");
@@ -155,3 +155,4 @@ tecs.forEach((el, ind) => {
         anim.classList.add("_disable");
     })
 })
+

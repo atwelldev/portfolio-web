@@ -142,9 +142,9 @@
 
 @keyframes buttonHover {
   from {
-    transform: translate(0, -5px); }
+    transform: translate(0, -2px); }
   to {
-    transform: translate(0, 5px); } }
+    transform: translate(0, 2px); } }
 
 @keyframes tryHover {
   from {

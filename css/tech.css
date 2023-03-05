@@ -88,8 +88,8 @@ html {
   margin-bottom: 30px; }
 
 .button {
-  height: 60px;
-  width: 200px;
+  height: 55px;
+  width: 190px;
   font-size: 2.1rem;
   font-weight: 600;
   color: #1c1d25;
@@ -102,5 +102,4 @@ html {
     animation: none; }
 
 ._desk .button:hover {
-  transform: scale(1.1, 1.1);
   box-shadow: -5px -5px 0 rgba(0, 255, 255, 0.6), -10px -10px 0 rgba(0, 255, 255, 0.3); }

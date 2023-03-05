@@ -4,7 +4,8 @@
 
 .footer {
     height: 400px;
-    @extend %backGrad;
+    background: linear-gradient(171deg, #1c1d25,#0a0a0d);
+    
     width: 100%;
     // box-shadow: 0px -30px 30px rgba(0,0,0, 0.7);
     color: $subLightText;
@@ -24,7 +25,7 @@
 .footer__block {
     width: 100%;
     opacity: 0;
-    transform: translate(10%, 0);
+    transform: translate(-10%, 0);
     transition: $appear ease;
 }
 
@@ -54,7 +55,7 @@
 }
 
 ._desk .footer__el_logo:hover {
-    transform: scale(1.1, 1.1) translate(0, -10px);
+    transform: translate(0, -10px);
     color: white;
 }
 
@@ -75,7 +76,7 @@
 }
 ._desk .footer__el_tel:hover {
     color: white;
-    transform: scale(1.2, 1.2);
+    // transform: scale(1.2, 1.2);
 }
 .footer__el_email {
     margin-bottom: 15px;
@@ -88,7 +89,7 @@
 }
 ._desk .footer__el_email:hover {
     color: white;
-    transform: scale(1.2, 1.2);
+    // transform: scale(1.2, 1.2);
 }
 .footer__el_links {
     display: flex;
@@ -110,7 +111,7 @@
 }
 ._desk .footer__el_links div:hover {
     color: white;
-    transform: scale(1.2, 1.2);
+    // transform: scale(1.2, 1.2);
 }
 
 .footer__el_rights {

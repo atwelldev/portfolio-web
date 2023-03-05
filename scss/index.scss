@@ -117,7 +117,7 @@ body._scrollDisable {
 }
 
 ._desk .mobile-menu__burger:hover {
-    transform: scale(1.2, 1.2);
+    // transform: scale(1.2, 1.2);
     span, &::before, &::after {
         background-color: white;
     }
@@ -159,7 +159,7 @@ body._scrollDisable {
 
 ._desk .mobile-menu__contacts {
     li:hover {
-        transform: scale(1.2, 1.2);
+        // transform: scale(1.2, 1.2);
         color: white;
     }
 }
@@ -175,6 +175,10 @@ body._scrollDisable {
     position: relative;
     margin-bottom: 0;
     height: 100vh;
+    
+    .section-tec__ref {
+        z-index: 100;
+    }
     
 
 }
@@ -217,11 +221,14 @@ body._scrollDisable {
     animation: commet infinite 30s ease 5s;
     
     left: -999;
-    transform: rotate(-90deg) scale(4, 4);
+    transform: rotate(-90deg);
     background: url(../img/svg/commet.svg) center;
 }
 .first__text {
     z-index: 1;
+    // animation: buttonHover 2s ease alternate infinite;
+    
+
 }
 .first__container {
     z-index: 2;
@@ -286,8 +293,10 @@ body._scrollDisable {
         border-radius: $buttonRadius;
         animation: buttonAttention ease 1.5s infinite;
     }
-    animation: buttonHover ease 2s alternate infinite;
+    // animation: buttonHover ease 2s alternate infinite;
 }
+
+
 .first__button._disable {
     &::after {
         display: none;
@@ -353,8 +362,8 @@ body._scrollDisable {
 }
 .about-popup__cross {
     cursor: pointer;
-    width: 30px;
-    height:30px;
+    width: 25px;
+    height:25px;
     position: absolute;
     right: 40px;
     top: 40px;
@@ -396,11 +405,11 @@ body._scrollDisable {
 ._desk .about-popup__cross:hover {
     
     &::after {
-        transform: rotate(-45deg) scale(1.2, 1.2);
+        transform: rotate(-45deg);
         background-color: white;
     }
     &::before {
-        transform: rotate(45deg) scale(1.2, 1.2);
+        transform: rotate(45deg);
         background-color: white;
     }
 } 
@@ -421,6 +430,7 @@ body._scrollDisable {
     justify-content: center;
     span {
         color: $subColor;
+        font-weight: 500;
     }
 
     transition: ease 1s;
@@ -457,12 +467,14 @@ body._scrollDisable {
     margin-bottom: 40px;
     font-weight: 500;
     
+    
 }
 .about-popup__el_paragraph {
     font-size: 1.8rem;
     margin-bottom: 90px;
     font-weight: 100;
     // text-indent: 40px;
+    line-height: 20px;
 }
 .about-popup__el_tec {
     width: 100%;
@@ -609,11 +621,13 @@ body._scrollDisable {
     width: 100%;
     // @extend %backGrad;
     position: relative;
-    padding-top: 80px;
+    // padding-top: 80px;
     z-index: 2;
     // background: -webkit-linear-gradient(171deg, #1c1d25,#0a0a0d);
     background: url("/img/svg/rates-space.svg") center center, linear-gradient(171deg, #1c1d25,#0a0a0d);
-    height: 100vh;
+    background-attachment: fixed;
+    // min-height: 100vh;
+    padding: 80px 0 140px 0;
 }
 .section-rates__ref {
     position: absolute;
@@ -622,7 +636,7 @@ body._scrollDisable {
     transform: translate(-50%, 0);
     font-size: 2.1rem;
     z-index: 0;
-    cursor: pointer;
+    // cursor: pointer;
     transition: $hoverTrans ease;
     color: $subLightText;
 
@@ -640,13 +654,13 @@ body._scrollDisable {
 
 ._desk .section-rates__ref {
     &:hover {
-        transform: translate(-50%, -10px) scale(1.5, 1.5);
-        color: white;
+        // transform: translate(-50%, -10px);
+        // color: white;
         
     }
     
     &:hover span {
-        opacity: 0;
+        // opacity: 0;
     }
 }
 
@@ -655,6 +669,7 @@ body._scrollDisable {
     
     padding: 0 25px;
     box-sizing: border-box;
+    
 }
 
 .section-rates__list {
@@ -666,6 +681,8 @@ body._scrollDisable {
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     border-radius: $blockRadius;
     overflow: hidden;
+
+    
 }
 
 .section-rates__list._intersection {
@@ -702,8 +719,8 @@ body._scrollDisable {
     color: $subLightText;
 }
 .section-rates__cross {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     position: relative;
     transition: $hoverTrans ease;
     cursor: pointer;
@@ -865,7 +882,7 @@ body._scrollDisable {
     overflow: visible;
 
     &:hover {
-        transform: translate(0, -10px);
+        // transform: translate(0, -10px);
 
         .works__img img {
             animation: imgScroll 10s linear alternate infinite;
@@ -919,7 +936,7 @@ body._scrollDisable {
     z-index: 100;
 }
 ._desk .works__links div:hover {
-    transform: scale(1.2, 1.2);
+    // transform: scale(1.2, 1.2);
     color: white;
 }
 
@@ -978,7 +995,7 @@ body._scrollDisable {
     transform: translate(-50%, 0);
     font-size: 2.1rem;
     z-index: 0;
-    cursor: pointer;
+    // cursor: pointer;
     transition: $hoverTrans ease;
     color: $subLightText;
 
@@ -995,13 +1012,13 @@ body._scrollDisable {
 
 ._desk .section-tec__ref {
     &:hover {
-        transform: translate(-50%, -5px) scale(1.5, 1.5);
-        color: white;
+        // transform: translate(-50%, -5px);
+        // color: white;
         
     }
     
     &:hover span {
-        opacity: 0;
+        // opacity: 0;
     }
 
     &::after {
@@ -1028,7 +1045,7 @@ body._scrollDisable {
 ._desk ._ref {
     &:hover {
         &::after {
-            height: 0;
+            // height: 0;
         }
     }
 }
@@ -1200,10 +1217,10 @@ body._scrollDisable {
 
         // 2.4
         &:nth-child(4)::after {
-            content: "Python";
+            content: "Git";
         }
         &:nth-child(4):hover {
-            color: lightgreen;
+            color: rgb(255, 97, 62);
         }
 
         // 2.5
@@ -1249,4 +1266,3 @@ html, body {
     scrollbar-color: rgb(34, 34, 34) $mainDark; /* «цвет ползунка» «цвет полосы скроллбара» */
     scrollbar-width: thin;  /* толщина */
 }
-

@@ -97,8 +97,8 @@ html {
   margin-bottom: 30px; }
 
 .button {
-  height: 60px;
-  width: 200px;
+  height: 55px;
+  width: 190px;
   font-size: 2.1rem;
   font-weight: 600;
   color: #1c1d25;
@@ -111,7 +111,6 @@ html {
     animation: none; }
 
 ._desk .button:hover {
-  transform: scale(1.1, 1.1);
   box-shadow: -5px -5px 0 rgba(0, 255, 255, 0.6), -10px -10px 0 rgba(0, 255, 255, 0.3); }
 
 @font-face {
@@ -188,10 +187,8 @@ body._scrollDisable {
 .mobile-menu__burger_container._disable::after {
   opacity: 0; }
 
-._desk .mobile-menu__burger:hover {
-  transform: scale(1.2, 1.2); }
-  ._desk .mobile-menu__burger:hover span, ._desk .mobile-menu__burger:hover::before, ._desk .mobile-menu__burger:hover::after {
-    background-color: white; }
+._desk .mobile-menu__burger:hover span, ._desk .mobile-menu__burger:hover::before, ._desk .mobile-menu__burger:hover::after {
+  background-color: white; }
 
 .mobile-menu__burger._active span {
   opacity: 0; }
@@ -220,7 +217,6 @@ body._scrollDisable {
     color: inherit; }
 
 ._desk .mobile-menu__contacts li:hover {
-  transform: scale(1.2, 1.2);
   color: white; }
 
 .first {
@@ -231,6 +227,8 @@ body._scrollDisable {
   position: relative;
   margin-bottom: 0;
   height: 100vh; }
+  .first .section-tec__ref {
+    z-index: 100; }
 
 .first__paral_top {
   width: 400%;
@@ -263,7 +261,7 @@ body._scrollDisable {
   height: 600px;
   animation: commet infinite 30s ease 5s;
   left: -999;
-  transform: rotate(-90deg) scale(4, 4);
+  transform: rotate(-90deg);
   background: url(../img/svg/commet.svg) center; }
 
 .first__text {
@@ -307,8 +305,7 @@ body._scrollDisable {
 .first__button {
   margin-top: 40px;
   animation: appear ease 1.5s;
-  position: relative;
-  animation: buttonHover ease 2s alternate infinite; }
+  position: relative; }
   .first__button::after {
     content: "";
     position: absolute;
@@ -370,8 +367,8 @@ body._scrollDisable {
 
 .about-popup__cross {
   cursor: pointer;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   right: 40px;
   top: 40px;
@@ -401,11 +398,11 @@ body._scrollDisable {
   opacity: 1; }
 
 ._desk .about-popup__cross:hover::after {
-  transform: rotate(-45deg) scale(1.2, 1.2);
+  transform: rotate(-45deg);
   background-color: white; }
 
 ._desk .about-popup__cross:hover::before {
-  transform: rotate(45deg) scale(1.2, 1.2);
+  transform: rotate(45deg);
   background-color: white; }
 
 .about-popup__white {
@@ -421,7 +418,8 @@ body._scrollDisable {
   justify-content: center;
   transition: ease 1s; }
   .about-popup__white span {
-    color: #6fffff; }
+    color: #03c6c6;
+    font-weight: 500; }
 
 .about-popup._active .about-popup__white {
   animation: whitePopup 1s ease; }
@@ -449,7 +447,8 @@ body._scrollDisable {
 .about-popup__el_paragraph {
   font-size: 1.8rem;
   margin-bottom: 90px;
-  font-weight: 100; }
+  font-weight: 100;
+  line-height: 20px; }
 
 .about-popup__el_tec {
   width: 100%;
@@ -555,10 +554,10 @@ body._scrollDisable {
   box-shadow: 0px -30px 30px rgba(0, 0, 0, 0.7);
   width: 100%;
   position: relative;
-  padding-top: 80px;
   z-index: 2;
   background: url("/img/svg/rates-space.svg") center center, linear-gradient(171deg, #1c1d25, #0a0a0d);
-  height: 100vh; }
+  background-attachment: fixed;
+  padding: 80px 0 140px 0; }
 
 .section-rates__ref {
   position: absolute;
@@ -567,7 +566,6 @@ body._scrollDisable {
   transform: translate(-50%, 0);
   font-size: 2.1rem;
   z-index: 0;
-  cursor: pointer;
   transition: 0.3s ease;
   color: #b8bad0; }
   .section-rates__ref span {
@@ -577,13 +575,6 @@ body._scrollDisable {
     animation: arrow ease 1s infinite alternate;
     margin-left: 10px;
     transition: 0.3s ease; }
-
-._desk .section-rates__ref:hover {
-  transform: translate(-50%, -10px) scale(1.5, 1.5);
-  color: white; }
-
-._desk .section-rates__ref:hover span {
-  opacity: 0; }
 
 .section-rates__container {
   padding: 0 25px;
@@ -623,8 +614,8 @@ body._scrollDisable {
   color: #b8bad0; }
 
 .section-rates__cross {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   position: relative;
   transition: 0.3s ease;
   cursor: pointer; }
@@ -739,15 +730,13 @@ body._scrollDisable {
   cursor: pointer;
   transition: 0.3s ease;
   overflow: visible; }
-  .works__card:hover {
-    transform: translate(0, -10px); }
-    .works__card:hover .works__img img {
-      animation: imgScroll 10s linear alternate infinite; }
-    .works__card:hover .works__links {
-      opacity: 1;
-      transform: translate(0, -30px); }
-    .works__card:hover::after {
-      opacity: 1; }
+  .works__card:hover .works__img img {
+    animation: imgScroll 10s linear alternate infinite; }
+  .works__card:hover .works__links {
+    opacity: 1;
+    transform: translate(0, -30px); }
+  .works__card:hover::after {
+    opacity: 1; }
   .works__card::after {
     content: "";
     width: 100%;
@@ -778,7 +767,6 @@ body._scrollDisable {
     transition: ease 0.3s; }
 
 ._desk .works__links div:hover {
-  transform: scale(1.2, 1.2);
   color: white; }
 
 .works__img {
@@ -824,7 +812,6 @@ body._scrollDisable {
   transform: translate(-50%, 0);
   font-size: 2.1rem;
   z-index: 0;
-  cursor: pointer;
   transition: 0.3s ease;
   color: #b8bad0; }
   .section-tec__ref span {
@@ -834,13 +821,6 @@ body._scrollDisable {
     animation: arrow ease 1s infinite alternate;
     margin-left: 10px;
     transition: 0.3s ease; }
-
-._desk .section-tec__ref:hover {
-  transform: translate(-50%, -5px) scale(1.5, 1.5);
-  color: white; }
-
-._desk .section-tec__ref:hover span {
-  opacity: 0; }
 
 ._desk .section-tec__ref::after {
   height: 45px; }
@@ -854,9 +834,6 @@ body._scrollDisable {
   width: 1px;
   background-color: #b8bad0;
   transition: ease 0.3s; }
-
-._desk ._ref:hover::after {
-  height: 0; }
 
 ._ref._disable span {
   opacity: 0; }
@@ -976,10 +953,10 @@ body._scrollDisable {
   color: #5ad6ff; }
 
 .section-tec__el_2 div:nth-child(4)::after {
-  content: "Python"; }
+  content: "Git"; }
 
 .section-tec__el_2 div:nth-child(4):hover {
-  color: lightgreen; }
+  color: #ff613e; }
 
 .section-tec__el_2 div:nth-child(5)::after {
   content: "Docker"; }

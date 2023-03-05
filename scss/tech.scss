@@ -61,8 +61,8 @@ html {
 .button {
     //background: linear-gradient(to right, rgb(52, 207, 156), rgb(140, 203, 182));
     // background: linear-gradient(to right, cyan, #b0ffff);
-    height: 60px;
-    width: 200px;
+    height: 55px;
+    width: 190px;
     font-size: 2.1rem;
     font-weight: 600;
     color: $mainDark;
@@ -101,7 +101,7 @@ html {
 }
 ._desk .button {
     &:hover {
-        transform: scale(1.1, 1.1);
+        // transform: scale(1.1, 1.1) !important;
         box-shadow: -5px -5px 0 rgba(0, 255, 255, 0.6), -10px -10px 0 rgba(0, 255, 255, 0.3)
         
     }

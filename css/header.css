@@ -54,8 +54,7 @@
   font-weight: 500; }
 
 ._desk .header__el:hover {
-  color: white;
-  transform: scale(1.1, 1.1); }
+  color: white; }
 
 .header__link {
   color: inherit; }

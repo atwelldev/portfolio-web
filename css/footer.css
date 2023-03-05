@@ -1,9 +1,6 @@
 .footer {
-  background: -webkit-linear-gradient(171deg, #1c1d25, #0a0a0d);
-  background: linear-gradient(171deg, #1c1d25, #0a0a0d); }
-
-.footer {
   height: 400px;
+  background: linear-gradient(171deg, #1c1d25, #0a0a0d);
   width: 100%;
   color: #b8bad0;
   position: relative;
@@ -21,7 +18,7 @@
 .footer__block {
   width: 100%;
   opacity: 0;
-  transform: translate(10%, 0);
+  transform: translate(-10%, 0);
   transition: 1s ease; }
 
 .footer__block._intersection {
@@ -45,7 +42,7 @@
     text-shadow: 0 0 10px black; }
 
 ._desk .footer__el_logo:hover {
-  transform: scale(1.1, 1.1) translate(0, -10px);
+  transform: translate(0, -10px);
   color: white; }
 
 .footer__el_ip {
@@ -63,8 +60,7 @@
     color: inherit; }
 
 ._desk .footer__el_tel:hover {
-  color: white;
-  transform: scale(1.2, 1.2); }
+  color: white; }
 
 .footer__el_email {
   margin-bottom: 15px;
@@ -75,8 +71,7 @@
     color: inherit; }
 
 ._desk .footer__el_email:hover {
-  color: white;
-  transform: scale(1.2, 1.2); }
+  color: white; }
 
 .footer__el_links {
   display: flex;
@@ -93,8 +88,7 @@
     margin-right: 50px; }
 
 ._desk .footer__el_links div:hover {
-  color: white;
-  transform: scale(1.2, 1.2); }
+  color: white; }
 
 .footer__el_rights {
   font-size: 1.2rem; }

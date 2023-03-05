@@ -3,10 +3,11 @@
         "target": "ES6",
         "removeComments": true,
         "outDir": "js",
+        "rootDir": "ts",
         "sourceMap": false,
         "watch": true,
-        
     },
+
     // "files": [
     //     "ts/index.ts"
     // ]

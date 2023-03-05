@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Denis Atwell</title>
-
+    <script>
+        class cls extends CLs {
+            constructor() {
+                this.a = a
+            }
+        }
+    </script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=League+Spartan:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
@@ -85,6 +91,7 @@
             
             <!-- First -->
             <section class="first _section">
+                <div class="section-tec__ref _ref">Технологии</div>
                 <div class="first__paral_top"></div>
                 <div class="first__paral_bot"></div>
                 <div class="first__commet"></div>
@@ -98,6 +105,7 @@
                             <span>F</span><span>u</span><span>l</span><span>l</span><span>s</span><span>t</span><span>a</span><span>c</span><span>k</span><span>-</span><span>р</span><span>а</span><span>з</span><span>р</span><span>а</span><span>б</span><span>о</span><span>т</span><span>ч</span><span>и</span><span>к</span>
                         </p>
                         <button class="first__button button">Обо мне</button>
+                        
                     </div>
                 </div>
             </section>
@@ -111,8 +119,8 @@
                     <div class="about-popup__cross" id="mobCross"></div>
                     <ul class="about-popup__list">
                         <li class="about-popup__el about-popup__el_title">Обо мне</li>
-                        <li class="about-popup__el about-popup__el_subtitle">веб-разработчки</li>
-                        <li class="about-popup__el about-popup__el_paragraph">Lorem <span>lorem</span> lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ea officia mollitia dolorem nihil fugiat non quaerat, quasi porro voluptatem! ipsum dolor, sit amet consectetur adipisicing elit. Expedita, laborum impedit. Perferendis tempore tempora ut repellat ab eveniet aspernatur maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptas alias! Non distinctio quidem sit repellat est illum repellendus in.</li>
+                        <li class="about-popup__el about-popup__el_subtitle">веб-разработчик</li>
+                        <li class="about-popup__el about-popup__el_paragraph">Привет! Меня зовут <span>Денис</span>. Я - <span>Fullstack-разработчик</span>. Занимаюсь разработкой <span>сайтов</span> и <span>ботов</span>. Люблю <span>сложные</span> задачи и <span>красивый</span> дизайн. Предлагаю широкий спетр услуг: от внесения легких <span>правок</span> на сайт, до разработки полноценного <span>интернет-магазина</span>. Программирую <span>ботов</span> для <span>мессенджеров</span> и <span>бирж</span>. Являюсь владельцем собственной веб-студии: <a href="https://...">AtwellStudio</a>. Свяжитесь со мной, я всегда рад интересным <span>предложениям</span>!</li>
                         <li class="about-popup__el about-popup__el_tec">
                             <div><i class="fa-brands fa-square-js"></i></div>
                             <div><i class="fa-brands fa-react"></i></div>
@@ -150,9 +158,36 @@
                 </div>
             </div>
 
+            <!-- section-tec -->
+            
+            <section class="section-tec">
+                <div class="section-tec__ref _ref">Услуги</div>
+                <div class="section-tec__container _container">
+                    <ul class="section-tec__list" id="tec">
+                        <li class="section-tec__list_title">Технологии и фрэймворки</li>
+                        <li class="section-tec__el section-tec__el_1">
+                            <div><i class="fa-brands fa-square-js"></i></div>
+                            <div><i class="fa-brands fa-react"></i></div>
+                            <div><i class="fa-brands fa-node-js"></i></div>
+                            <div>EX</div>
+                            <div><i class="fa-brands fa-html5"></i></div>
+                            <div><i class="fa-brands fa-css3-alt"></i></div>
+                        </li>
+                        <li class="section-tec__el section-tec__el_2">
+                            <div><i class="fa-brands fa-php"></i></div>
+                            <div><i class="fa-brands fa-laravel"></i></div>
+                            <div><i class="fa-brands fa-wordpress"></i></div>
+                            <div><i class="fa-brands fa-git-alt"></i></div>
+                            <div><i class="fa-brands fa-docker"></i></div>
+                            <div><i class="fa-brands fa-linux"></i></div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
             <!-- section rates -->
             <section class="section-rates">
-                <div class="section-rates__ref _ref">Услуги <span>↓</span></div>
+                <div class="section-rates__ref _ref">Услуги</div>
                 <div class="section-rates__container _container">
                     <ul class="section-rates__list" id="section-rates__list">
                         <!-- el 1 -->
@@ -165,12 +200,12 @@
                             <ul class="section-rates__text">
                                 <li class="section-rates__text_el">
                                     <p class="section-rates__par">лэндинг</p>
-                                    <p class="section-rates__price">1800р</p>   
+                                    <p class="section-rates__price">от 15000р</p>   
                                 </li>
 
                                 <li class="section-rates__text_el">
                                     <p class="section-rates__par">интернет-магазин</p>
-                                    <p class="section-rates__price">20000р</p>   
+                                    <p class="section-rates__price">от 60000р</p>   
                                 </li>
 
                             </ul>
@@ -249,7 +284,7 @@
 
             <!-- Works -->
             <section class="works" id="works">
-                <div class="section-rates__ref _ref">Работы<span>↓</span></div>
+                <div class="section-rates__ref _ref">Работы</div>
                 <div class="works__container works__container_1" id="worksInter">
                         
                     <div class="works__card">
@@ -343,7 +378,7 @@
 
             <!-- mob -->
             <section class="works works-mob" id="worksMob">
-                <div class="section-rates__ref _ref">Работы<span>↓</span></div>
+                <div class="section-rates__ref _ref">Работы</div>
                 <div class="works__container works__container_1" id="worksInter">
                         
                     <div class="works__card">
@@ -444,31 +479,6 @@
 
             </section>
 
-            
-            <section class="section-tec">
-                <div class="section-tec__ref _ref">Информация<span>↓</span></div>
-                <div class="section-tec__container _container">
-                    <ul class="section-tec__list" id="tec">
-                        <li class="section-tec__list_title">Технологии и фрэймворки</li>
-                        <li class="section-tec__el section-tec__el_1">
-                            <div><i class="fa-brands fa-square-js"></i></div>
-                            <div><i class="fa-brands fa-react"></i></div>
-                            <div><i class="fa-brands fa-node-js"></i></div>
-                            <div>EX</div>
-                            <div><i class="fa-brands fa-html5"></i></div>
-                            <div><i class="fa-brands fa-css3-alt"></i></div>
-                        </li>
-                        <li class="section-tec__el section-tec__el_2">
-                            <div><i class="fa-brands fa-php"></i></div>
-                            <div><i class="fa-brands fa-laravel"></i></div>
-                            <div><i class="fa-brands fa-wordpress"></i></div>
-                            <div><i class="fa-brands fa-python"></i></div>
-                            <div><i class="fa-brands fa-docker"></i></div>
-                            <div><i class="fa-brands fa-linux"></i></div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
 
         </main>
 
